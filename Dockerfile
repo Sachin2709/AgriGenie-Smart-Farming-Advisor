@@ -30,8 +30,8 @@ RUN mkdir -p instance reports uploads
 ENV PORT=5000
 
 # Use 1 worker — sentence-transformers model is large; timeout 120s for RAG init
-CMD gunicorn "app:create_app()" \
-    --bind 0.0.0.0:$PORT \
+CMD exec gunicorn "app:create_app()" \
+    --bind 0.0.0.0:${PORT:-10000} \
     --workers 1 \
     --timeout 120 \
     --access-logfile - \

@@ -15,7 +15,8 @@ ibm-watsonx-ai==1.5.14
 ibm-cloud-sdk-core==3.22.0
 
 # RAG / Vector Store (FAISS is the default and Windows-friendly)
-faiss-cpu==1.9.0.post1
+#faiss-cpu==1.9.0.post1
+chromadb==0.6.3
 sentence-transformers==3.4.1
 
 # Optional: install separately if you want the ChromaDB backend on a machine

@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Farming Calendar – AgriGenie{% endblock %}
+{% block page_title %}📅 Farming Calendar{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <h2 class="ag-page-heading">📅 Farming Calendar</h2>
+  <p class="ag-page-subheading">Month-by-month farming operations guide with AI-powered advisory for your crops and region.</p>
+</div>
+
+<!-- Month Selector -->
+<div class="ag-card mb-4">
+  <div class="ag-card-body">
+    <div class="ag-calendar-grid">
+      {% set months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'] %}
+      {% for m in months %}
+      <div class="ag-month-card {{ 'active' if loop.index == current_month }}"
+        id="monthCard{{ loop.index }}"
+        onclick="selectMonth({{ loop.index }})">
+        <div style="font-size:1.2rem;margin-bottom:4px">
+          {% set icons = ['❄️','🌸','🌾','🔥','☀️','🌧','☔','🌿','🍂','🌾','❄','🎄'] %}
+          {{ icons[loop.index0] }}
+        </div>
+        <div style="font-weight:700;font-size:.82rem">{{ m }}</div>
+        {% if loop.index == current_month %}
+        <div style="font-size:.65rem;margin-top:2px;opacity:.8">NOW</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- Advisory Form -->
+  <div class="col-lg-4">
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">⚙️ Advisory Settings</h6>
+      </div>
+      <div class="ag-card-body">
+        <div class="ag-form-group">
+          <label class="ag-form-label">State / Region</label>
+          <select id="calState" class="ag-input">
+            <option value="">Select State</option>
+            {% for s in ['North India (Punjab/Haryana/UP)','South India (AP/Telangana/Karnataka)',
+                         'Central India (MP/Rajasthan)','West India (Maharashtra/Gujarat)',
+                         'East India (WB/Bihar/Odisha)','Northeast India'] %}
+            <option value="{{ s }}" {{ 'selected' if profile and profile.state and s.split('(')[0].strip().lower() in profile.state.lower() }}>{{ s }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="ag-form-group">
+          <label class="ag-form-label">Focus Crop (optional)</label>
+          <input type="text" id="calCrop" class="ag-input"
+            value="{{ profile.primary_crops.split(',')[0].strip() if profile and profile.primary_crops else '' }}"
+            placeholder="e.g. Wheat, Rice, Cotton">
+        </div>
+        <div class="ag-form-group">
+          <label class="ag-form-label">Selected Month</label>
+          <div id="selectedMonthDisplay" style="font-size:1.1rem;font-weight:700;color:var(--ag-primary)">
+            {{ ['January','February','March','April','May','June','July','August','September','October','November','December'][current_month-1] }}
+          </div>
+        </div>
+        <button class="btn-ag w-100" onclick="getCalendarAdvisory()">
+          📅 Get Monthly Advisory
+        </button>
+      </div>
+    </div>
+
+    <!-- Crop Season Card -->
+    <div class="ag-card mt-3">
+      <div class="ag-card-header"><h6 class="ag-card-title">🗓 Season Overview</h6></div>
+      <div class="ag-card-body p-3">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          {% for season, months, color, crops in [
+            ('Kharif', 'Jun–Nov', '#22c55e', 'Rice, Maize, Cotton, Soybean'),
+            ('Rabi', 'Oct–Apr', '#3b82f6', 'Wheat, Mustard, Gram, Lentil'),
+            ('Zaid', 'Feb–May', '#f59e0b', 'Melon, Cucumber, Moong'),
+          ] %}
+          <div style="border-left:3px solid {{ color }};padding:8px 12px;background:var(--ag-bg);border-radius:0 8px 8px 0">
+            <div style="font-weight:700;font-size:.88rem;color:var(--ag-text)">{{ season }} ({{ months }})</div>
+            <div style="font-size:.75rem;color:var(--ag-muted)">{{ crops }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advisory Output -->
+  <div class="col-lg-8">
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">🤖 Monthly Farming Operations</h6>
+        <span style="font-size:.75rem;color:var(--ag-muted)" id="advisoryMonthLabel">Current Month</span>
+      </div>
+      <div class="ag-card-body">
+        <div id="calendarResult">
+          <div class="text-center py-5" style="color:var(--ag-muted)">
+            <div style="font-size:4rem;margin-bottom:12px">📅</div>
+            <p>Select a month and click<br><strong>Get Monthly Advisory</strong></p>
+            <p style="font-size:.82rem">Get AI-powered farming operations for<br>sowing, fertilizing, pest management, and harvest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Static month reminders -->
+    <div class="ag-card mt-3">
+      <div class="ag-card-header"><h6 class="ag-card-title">⚠️ Key Agricultural Dates</h6></div>
+      <div class="ag-card-body p-0">
+        <table class="ag-price-table">
+          <thead><tr><th>Period</th><th>Activity</th><th>Priority</th></tr></thead>
+          <tbody>
+            {% for period, activity, priority in [
+              ('Nov 1–25', 'Optimal Wheat Sowing Window (North India)', 'Critical'),
+              ('Jun 15–Jul 15', 'Kharif Sowing with Monsoon Onset', 'Critical'),
+              ('Oct–Nov', 'PMFBY Kharif Crop Insurance Enrollment', 'Important'),
+              ('Feb 15–Mar 15', 'Spring Sugarcane Planting Window', 'Important'),
+              ('Apr–May', 'Pre-Kharif Land Preparation & Soil Testing', 'Recommended'),
+              ('Sep–Oct', 'Soil Test Before Rabi Sowing', 'Recommended'),
+            ] %}
+            <tr>
+              <td>{{ period }}</td>
+              <td>{{ activity }}</td>
+              <td><span class="ag-badge {{ 'badge-down' if priority=='Critical' else ('badge-up' if priority=='Important' else 'badge-stable') }}">{{ priority }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let selectedMonth = {{ current_month }};
+const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function selectMonth(m) {
+  document.querySelectorAll('.ag-month-card').forEach((el,i) => {
+    el.classList.toggle('active', i === m-1);
+  });
+  selectedMonth = m;
+  document.getElementById("selectedMonthDisplay").textContent = monthNames[m-1];
+  document.getElementById("advisoryMonthLabel").textContent = monthNames[m-1] + " Advisory";
+}
+
+async function getCalendarAdvisory() {
+  document.getElementById("advisoryMonthLabel").textContent = monthNames[selectedMonth-1] + " Advisory";
+  await queryAI("/api/calendar-advisory", {
+    month: selectedMonth,
+    crop:  document.getElementById("calCrop").value,
+    state: document.getElementById("calState").value,
+  }, "calendarResult", "📅 Building monthly operations plan…");
+}
+
+// Auto-load current month advisory
+window.addEventListener("load", getCalendarAdvisory);
+</script>
+{% endblock %}

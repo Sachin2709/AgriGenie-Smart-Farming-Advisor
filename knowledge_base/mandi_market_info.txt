@@ -1,0 +1,169 @@
+MANDI PRICES, MARKET INTELLIGENCE, AND AGRI-TRADE
+===================================================
+
+## UNDERSTANDING MANDI PRICE SYSTEM IN INDIA
+
+INDIA'S AGRICULTURAL MARKETING STRUCTURE:
+- APMC (Agricultural Produce Market Committee) Mandis: State-regulated wholesale markets
+- Total: 7,000+ principal markets and 22,000+ sub/periodic markets
+- Daily arrivals and price data collected by AGMARKNET (agmarknet.gov.in)
+- e-NAM (National Agriculture Market): Online platform integrating APMCs
+
+MANDI PRICE COMPONENTS:
+- Modal Price: Most common transaction price (used for MSP comparison)
+- Minimum Price: Lowest transacted price
+- Maximum Price: Highest transacted price
+- Arrival Volume: Total quantity arriving in mandi (quintals)
+
+FACTORS AFFECTING MANDI PRICES:
+1. Seasonal supply: prices lowest at harvest; highest in lean season
+2. MSP: Government support price; market should not go below MSP
+3. Export demand: Higher export = higher domestic prices
+4. Import policy: Lower import duty = lower domestic prices
+5. Weather: Poor crop = higher prices; bumper crop = price crash
+6. Processing industry demand: Particularly for cotton, sugarcane, oilseeds
+7. Procurement by agencies: Government buying at MSP supports floor price
+
+## PRICE TRENDS FOR MAJOR COMMODITIES
+
+WHEAT:
+- Harvest season price (March–April): Near MSP (₹2,275/q in 2024–25)
+- Off-season price (November–December): ₹2,400–2,600/q
+- Post-harvest storage gain: ₹100–200/q per month
+- Major mandis: Khanna (Punjab), Hapur (UP), Sriganganagar (Raj)
+
+RICE:
+- Paddy (Common) harvest price: ₹2,200–2,400/q
+- Basmati (1121): ₹4,500–6,500/q depending on quality
+- Major mandis: Karnal (Haryana), Fazilka (Punjab), Dhampur (UP)
+
+SOYBEAN:
+- Harvest (October–November): Near MSP ₹4,892/q
+- Pre-sowing demand (May–June): ₹5,200–5,500/q
+- Oil mill purchase price varies with soy oil international price
+
+COTTON:
+- Kapas (seed cotton): MSP + ₹200–500/q premium for quality cotton
+- CCI procurement at MSP if market falls below
+- Major mandis: Rajkot (Gujarat), Adilabad (Telangana), Guntur (AP)
+
+ONION:
+- Most volatile crop; price range: ₹500–7,000/q in same year
+- Peak price: October–December (kharif marketing)
+- Low price: March–May (rabi harvest)
+- Major mandis: Lasalgaon (Maharashtra) – Asia's largest onion market
+- Export destination: Bangladesh, Malaysia, Sri Lanka, UAE
+
+TOMATO:
+- Extreme price volatility: ₹200 to ₹8,000/q in same year
+- Price spikes during unseasonal rain or transportation disruption
+- Major surplus: Karnataka (Kolar), AP (Madanapalle), Maharashtra (Narayangaon)
+
+POTATO:
+- Cold storage plays key role in price regulation
+- Harvest price (March–April): ₹400–700/q
+- May–August (storage period): ₹600–1000/q
+- Off-storage (October onwards): ₹500–800/q
+- Major area: UP (Agra, Kanpur), Punjab, West Bengal
+
+PULSES (AAHAR DALS):
+- Government actively procures through NAFED to stabilize prices
+- Tur Dal: ₹6,000–9,000/q range over last 5 years
+- Moong: ₹7,000–9,500/q
+- Masur: ₹5,000–7,000/q
+- Buffer stock maintained by government: 2–3 lakh tonnes per pulse
+
+## MARKET INTELLIGENCE AND PRICE FORECASTING
+
+SEASONAL PRICE INDEX (sample for reference):
+- January = 110 (slightly above average; lean season)
+- February = 115 (lean season; prices high)
+- March = 100 (harvest begins; prices moderate)
+- April = 90 (peak harvest; prices fall)
+- May = 85 (post-harvest; lowest prices)
+- June = 90 (storage stocks selling)
+- July = 95 (kharif planting; moderate demand)
+- August = 100 (average)
+- September = 105 (pre-arrival speculation)
+- October = 100 (new kharif arrives; prices stable)
+- November = 95 (kharif marketing; prices soften)
+- December = 105 (rabi sowing; demand rises)
+
+MARKET TIMING STRATEGY:
+- Do NOT sell immediately at harvest; prices are lowest
+- Store if storage available; sell in lean season (Feb–May for kharif crops)
+- Forward selling/contract farming reduces price risk
+- Join FPO (Farmer Producer Organization) for collective bargaining
+
+## FPO (FARMER PRODUCER ORGANIZATIONS)
+
+WHAT IS FPO:
+- A legally registered organization (usually cooperative) of farmers
+- Can collectively buy inputs, sell produce, process, and add value
+- Eligible for government support under SFAC, NABARD, RKVY
+
+BENEFITS:
+- Bulk purchasing of inputs at lower price (10–20% savings)
+- Collective selling at better prices (5–15% higher)
+- Access to formal credit (as FPO, not individual)
+- Cold storage, processing infrastructure support
+- Direct export opportunities
+
+GOVERNMENT SUPPORT:
+- 10,000 FPO formation target by 2027–28 (GOI scheme)
+- ₹18 lakh equity grant + ₹15 lakh credit guarantee per FPO
+- Professional management support for 3 years
+
+HOW TO JOIN/FORM:
+- Minimum 11 farmers required for registration
+- Register under Companies Act 2013 (Section 8) or State Co-op Act
+- Contact: NABARD district office, SFAC, or state agriculture department
+
+## POST-HARVEST MANAGEMENT
+
+STORAGE TECHNOLOGIES:
+1. On-farm storage bags (HDPE/PP):
+   - Zero energy cool chamber: 20×20×20 feet; 25–30°C temp; keeps vegetables fresh
+   - PUSA zero energy chamber: Earthen pots, wet sand; no electricity
+   
+2. Metal Bins (Pusa Bin):
+   - 1.5–2 quintal capacity; prevents rat/insect damage
+   - Cost: ₹2,000–4,000/unit
+   - Good for pulses, wheat, gram storage for 6–8 months
+
+3. HDPE Woven Sacks with hermetic technology:
+   - IRRI bags (SuperGrain bags): eliminate oxygen; prevent insect pests
+   - Cost: ₹150–300/bag (50 kg); reusable for 5 years
+   - No pesticide required!
+
+4. Cold Storage:
+   - For potato: 2–4°C; 90–95% RH; 8–10 months storage life
+   - For apple/temperate fruits: 0–1°C; CA storage (Controlled Atmosphere) preferred
+   - For vegetables/flowers: 8–12°C; pre-cooling within 6 hours of harvest important
+   - Subsidy: 35% for general; 50% for NE/hilly states under NHB scheme
+
+POST-HARVEST LOSSES:
+- India loses 30–35% of food production post-harvest (₹90,000 crore/year)
+- Highest losses: Fruits (30–40%), Vegetables (25–35%), Pulses (8–10%)
+- Major causes: Improper storage, pest infestation, transport damage, market glut
+
+COLD CHAIN DEVELOPMENT:
+- NHB (National Horticulture Board): subsidy for pack houses, cold storage
+- MoFPI (Ministry of Food Processing): subsidy for food processing units, cold chain
+- APEDA: Export support; helps with cold chain infrastructure for exports
+
+## EXPORT OPPORTUNITIES FOR INDIAN FARMERS
+
+HIGH-VALUE EXPORT CROPS:
+1. Basmati Rice: ₹30,000–50,000 crore annual exports; main buyers: Iran, Saudi Arabia, UAE
+2. Grapes: Nashik grapes exported to Europe; ₹3,000–4,000/kg in EU
+3. Pomegranate: ₹3,000+ crore exports; buyers: Bangladesh, UAE, UK
+4. Mango: Alphonso/Kesar to UK, USA, Japan; ₹1,500–3,000 crore
+5. Spices: India #1 exporter; pepper, turmeric, chili, cumin
+6. Cotton: Raw cotton + yarn exports to Bangladesh, Vietnam, China
+
+HOW FARMERS CAN ACCESS EXPORT:
+- Join APEDA-registered exporter as supplier
+- Get GlobalGAP certification for EU markets (support available through APEDA)
+- Organic certification for premium prices
+- Join FPO that is linked to exporters

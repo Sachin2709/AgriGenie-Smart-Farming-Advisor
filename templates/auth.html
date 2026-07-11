@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Login' if page == 'login' else 'Register' }} – AgriGenie AI{% endblock %}
+
+{% block public_content %}
+<div class="ag-auth-container">
+  <div class="ag-auth-card">
+    <!-- Brand -->
+    <div class="text-center mb-4">
+      <div style="font-size:3rem;margin-bottom:8px">🌾</div>
+      <h2 style="font-weight:800;color:#1b5e20;margin-bottom:4px">AgriGenie AI</h2>
+      <p style="color:#666;font-size:.9rem">Smart Farming Advisor – Powered by IBM watsonx.ai</p>
+    </div>
+
+    <!-- Tabs -->
+    <div style="display:flex;background:#f1f5f9;border-radius:10px;padding:4px;margin-bottom:24px">
+      <a href="/login" style="flex:1;text-align:center;padding:8px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.88rem;
+        {{ 'background:#1b5e20;color:#fff;' if page=='login' else 'color:#666;' }}">
+        🔑 Login
+      </a>
+      <a href="/register" style="flex:1;text-align:center;padding:8px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.88rem;
+        {{ 'background:#1b5e20;color:#fff;' if page=='register' else 'color:#666;' }}">
+        ✨ Register
+      </a>
+    </div>
+
+    <!-- Alert placeholder -->
+    <div id="authAlert" style="display:none" class="alert mb-3"></div>
+
+    {% if page == 'login' %}
+    <!-- Login Form -->
+    <form id="loginForm">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <div class="ag-form-group">
+        <label class="ag-form-label">Username or Email</label>
+        <input type="text" name="username" class="ag-input" placeholder="Enter username or email" required autofocus>
+      </div>
+      <div class="ag-form-group">
+        <label class="ag-form-label">Password</label>
+        <input type="password" name="password" class="ag-input" placeholder="Enter password" required>
+      </div>
+      <button type="submit" class="btn-ag w-100 justify-content-center mt-2" style="height:46px;font-size:1rem">
+        🔑 Login to AgriGenie
+      </button>
+    </form>
+    <p class="text-center mt-3" style="font-size:.85rem;color:#666">
+      Don't have an account? <a href="/register" style="color:#1b5e20;font-weight:600">Register Free</a>
+    </p>
+
+    <script>
+    document.getElementById("loginForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const btn  = this.querySelector("button[type=submit]");
+      const orig = btn.innerHTML;
+      btn.innerHTML = "⏳ Logging in…";
+      btn.disabled  = true;
+      const fd   = new FormData(this);
+      try {
+        const r = await fetch("/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": fd.get("csrf_token")
+          },
+          body: JSON.stringify({
+            username: fd.get("username"),
+            password: fd.get("password")
+          })
+        });
+        const d = await r.json();
+        if (d.success) {
+          window.location.href = d.redirect;
+        } else {
+          const a = document.getElementById("authAlert");
+          a.className = "alert alert-danger";
+          a.textContent = d.message;
+          a.style.display = "block";
+          btn.innerHTML = orig;
+          btn.disabled = false;
+        }
+      } catch(err) {
+        btn.innerHTML = orig;
+        btn.disabled = false;
+      }
+    });
+    </script>
+
+    {% else %}
+    <!-- Register Form -->
+    <form id="registerForm">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <div class="ag-form-group">
+        <label class="ag-form-label">Username</label>
+        <input type="text" name="username" class="ag-input" placeholder="Choose a username" required autofocus minlength="3">
+      </div>
+      <div class="ag-form-group">
+        <label class="ag-form-label">Email</label>
+        <input type="email" name="email" class="ag-input" placeholder="Your email address" required>
+      </div>
+      <div class="ag-form-group">
+        <label class="ag-form-label">Password</label>
+        <input type="password" name="password" class="ag-input" placeholder="Create password (min. 6 chars)" required minlength="6">
+      </div>
+      <button type="submit" class="btn-ag w-100 justify-content-center mt-2" style="height:46px;font-size:1rem">
+        🌱 Create Free Account
+      </button>
+    </form>
+    <p class="text-center mt-3" style="font-size:.85rem;color:#666">
+      Already have an account? <a href="/login" style="color:#1b5e20;font-weight:600">Login</a>
+    </p>
+
+    <script>
+    document.getElementById("registerForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector("button[type=submit]");
+      const orig = btn.innerHTML;
+      btn.innerHTML = "⏳ Creating account…";
+      btn.disabled  = true;
+      const fd = new FormData(this);
+      try {
+        const r = await fetch("/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": fd.get("csrf_token")
+          },
+          body: JSON.stringify({
+            username: fd.get("username"),
+            email:    fd.get("email"),
+            password: fd.get("password")
+          })
+        });
+        const d = await r.json();
+        if (d.success) {
+          window.location.href = d.redirect;
+        } else {
+          const a = document.getElementById("authAlert");
+          a.className = "alert alert-danger";
+          a.textContent = d.message;
+          a.style.display = "block";
+          btn.innerHTML = orig;
+          btn.disabled = false;
+        }
+      } catch(err) {
+        btn.innerHTML = orig;
+        btn.disabled = false;
+      }
+    });
+    </script>
+    {% endif %}
+
+    <div class="text-center mt-4 pt-3" style="border-top:1px solid #e5e7eb">
+      <p style="font-size:.75rem;color:#9ca3af">
+        Powered by IBM watsonx.ai Granite Models<br>
+        🌾 AgriGenie AI v1.0 – For Indian Farmers
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

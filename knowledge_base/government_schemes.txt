@@ -1,0 +1,246 @@
+GOVERNMENT AGRICULTURE SCHEMES FOR INDIAN FARMERS
+==================================================
+
+## PM-KISAN (PRADHAN MANTRI KISAN SAMMAN NIDHI)
+LAUNCHED: February 24, 2019
+OBJECTIVE: Provide income support to all landholder farmer families
+
+BENEFITS:
+- ₹6,000 per year in 3 equal installments of ₹2,000
+- Directly transferred to bank account via DBT
+- First installment: April–July; Second: August–November; Third: December–March
+
+ELIGIBILITY:
+- All landholder farmers with cultivable land
+- Excludes: Constitutional post holders, income tax payers, Government employees (except Class IV/Multi-Tasking Staff)
+- Small and marginal farmers (< 2 ha) get priority
+
+HOW TO APPLY:
+- Visit pm-kisan.gov.in or nearest CSC (Common Service Centre)
+- Required documents: Aadhaar, bank account, land records (Khatauni)
+- Mobile app: PM Kisan App available on Google Play Store
+
+STATUS: Over 11 crore farmers registered; ₹2.4 lakh crore disbursed (as of 2024)
+
+---
+
+## FASAL BIMA YOJANA – PMFBY (PRADHAN MANTRI FASAL BIMA YOJANA)
+LAUNCHED: January 13, 2016 (Kharif 2016)
+OBJECTIVE: Comprehensive crop insurance against natural calamities
+
+PREMIUM RATES (Farmer's share):
+- Kharif crops: Maximum 2% of Sum Insured
+- Rabi crops: Maximum 1.5% of Sum Insured
+- Annual commercial/horticultural crops: Maximum 5%
+- Government pays remaining premium (states and Centre share 50:50)
+
+RISKS COVERED:
+- Pre-sowing risk: Prevented sowing due to drought, flood
+- Standing crop (Sowing to Harvesting): drought, flood, cyclone, storm, hailstorm, landslide, pest, disease, waterlogging
+- Post-harvest losses (14 days after harvest): cyclone, unseasonal rain
+- Localized calamities: hailstorm, landslide
+
+ENROLLMENT:
+- Compulsory for loanee farmers (taking crop loan from banks/MFIs)
+- Voluntary for non-loanee farmers
+- Enroll through: Bank/KCC account, CSC, Agri-Insurance Portal, PMFBY App
+
+CLAIM PROCESS:
+- Damage report within 72 hours (localized) or after crop cutting experiments (CCE)
+- Claims settled within 30 days of government notification
+- Amount credited directly to bank account
+
+---
+
+## SOIL HEALTH CARD (SHC) SCHEME
+LAUNCHED: February 19, 2015
+OBJECTIVE: Promote soil testing and balanced fertilizer use
+
+FEATURES:
+- Free soil testing at government and private labs
+- Tests 12 soil health parameters (N, P, K, S, Zn, Fe, Cu, Mn, B, pH, EC, OC)
+- Crop-specific fertilizer recommendations
+- Card valid for 2 years; renewed every crop season in pilot areas
+- Available in local language
+
+BENEFITS TO FARMERS:
+- Reduces fertilizer cost by 10–20% (no over-application)
+- Increases yield by 5–10%
+- Improves soil health over time
+
+HOW TO GET:
+- Contact nearest Soil Testing Laboratory (Mitti Janch Kendra)
+- Call Kisan Call Center: 1800-180-1551 (toll-free)
+- App: mySoil Health Card App
+
+---
+
+## KISAN CREDIT CARD (KCC)
+LAUNCHED: August 1998 (Modified in 2004, 2012)
+OBJECTIVE: Provide timely and adequate credit for agricultural needs
+
+FEATURES:
+- Revolving credit facility for crop cultivation, post-harvest, allied activities
+- Interest rate: 7% per annum (with 3% interest subvention for timely repayment = effective 4%)
+- Credit limit based on land holding, crop, and scale of finance
+- Personal accident insurance: ₹50,000 (death/permanent disability) + ₹25,000 (others)
+
+ELIGIBLE ACTIVITIES:
+- Crop production (short-term needs)
+- Post-harvest expenses, marketing
+- Farm maintenance (repair of machinery)
+- Allied activities: fisheries, animal husbandry, beekeeping
+
+DOCUMENTS REQUIRED:
+- Aadhaar, PAN
+- Land records (Khatauni/Khasra)
+- Passport size photos
+- Affidavit (no dues certificate)
+
+---
+
+## PMKSY – PRADHAN MANTRI KRISHI SINCHAI YOJANA
+(Refer to Irrigation Practices document for detailed info)
+MICRO-IRRIGATION FUND (MIF):
+- ₹5,000 crore corpus with NABARD
+- States can borrow at subsidized rate to promote drip/sprinkler
+- Target: Bring 10 million ha under micro-irrigation by 2024–25
+
+---
+
+## PARAMPARAGAT KRISHI VIKAS YOJANA (PKVY)
+LAUNCHED: 2015–16
+OBJECTIVE: Promote organic farming through cluster approach
+
+FEATURES:
+- ₹50,000 per ha for 3 years (₹31,000 to farmers directly)
+- Cluster of 50 farmers, 50 acres land minimum
+- Organic certification support (PGS-India)
+- Market linkage support
+- Training and capacity building
+
+COMPONENTS:
+1. Jaivik Kheti Portal: portal.pgsindia-ncof.gov.in
+2. MOVCD-NE: Mission Organic Value Chain Development for North East
+3. Capital Investment Subsidy for units
+
+---
+
+## NATIONAL FOOD SECURITY MISSION (NFSM)
+OBJECTIVE: Increase production of rice, wheat, pulses, coarse cereals, oilseeds
+
+INTERVENTIONS:
+- Seed distribution of HYV/hybrid varieties at 50% subsidy
+- Demonstration of improved technology packages (cluster front-line demonstrations)
+- Farm machinery subsidy (power weeders, SRI equipment, manual sprayers)
+- Soil ameliorants (lime, gypsum) at 50% subsidy in deficient areas
+- Training of farmers and extension workers
+
+CROPS COVERED: Rice, wheat, pulses (tur, moong, urad, masur, groundnut, soybean), coarse cereals (maize, bajra, jowar)
+
+---
+
+## RASHTRIYA KRISHI VIKAS YOJANA (RKVY-RAFTAAR)
+LAUNCHED: 2007 (RAFTAAR added 2017–18)
+OBJECTIVE: Incentivize states to invest in agriculture infrastructure
+
+COMPONENTS:
+- Agribusiness incubation: ₹25 lakh to ₹2 crore for agri-entrepreneurs
+- RAFTAAR (Remunerative Approaches for Agriculture and Allied sector Rejuvenation)
+- Farmer Producer Organizations (FPO) support
+- Agri-startups: seed funding through RKVY agribusiness incubators
+
+---
+
+## e-NAM (NATIONAL AGRICULTURE MARKET)
+LAUNCHED: April 14, 2016
+OBJECTIVE: Unified national electronic trading platform for agricultural commodities
+
+FEATURES:
+- Online trading of 100+ commodities across 1000+ mandis in 18 states
+- Transparent price discovery through competitive bidding
+- Farmer gets price from entire country, not just local mandi
+- Payment directly to bank account within 24 hours
+
+HOW TO PARTICIPATE:
+- Register at enam.gov.in
+- Required: Aadhaar, bank account, mobile number
+- Can participate through local mandi or from home via mobile app
+
+BENEFITS:
+- Farmers get 5–10% higher prices on average
+- Reduces intermediary exploitation
+- Reduces post-harvest losses through better logistics info
+
+---
+
+## GKY – GRAMIN KRISHI VIKASH YOJANA (State-level schemes)
+Various state governments provide additional support:
+
+ANDHRA PRADESH:
+- YSR Free Crop Input Scheme: Free seeds, fertilizers for crop loss
+- YSR Rythu Bharosa: ₹13,500/ha/year (in addition to PM-KISAN)
+
+TELANGANA:
+- Rythu Bandhu: ₹10,000/ha/season investment support; ₹20,000/year
+- Rythu Bima: Free life insurance of ₹5 lakh for all farmers (18–59 years)
+
+MADHYA PRADESH:
+- Mukhyamantri Kisan Kalyan Yojana: ₹6,000/year additional to PM-KISAN
+
+KARNATAKA:
+- Krishi Bhagya: Farm pond support, micro-irrigation, soil health
+
+MAHARASHTRA:
+- Magel Tyala Shet Tale (Farm Pond) scheme
+
+RAJASTHAN:
+- Mukhyamantri Krishi Udyog Yojana: Agro-processing subsidy
+
+---
+
+## CROP MINIMUM SUPPORT PRICE (MSP)
+
+MSP is the government-guaranteed price to protect farmers from market fluctuations.
+
+KHARIF 2024–25 MSP (Sample):
+- Paddy (Common): ₹2,300/quintal
+- Paddy (Grade A): ₹2,320/quintal
+- Jowar (Hybrid): ₹3,371/quintal
+- Bajra: ₹2,625/quintal
+- Maize: ₹2,225/quintal
+- Cotton (Medium staple): ₹7,121/quintal
+- Cotton (Long staple): ₹7,521/quintal
+- Soybean: ₹4,892/quintal
+- Groundnut: ₹6,783/quintal
+- Tur (Arhar): ₹7,550/quintal
+- Moong: ₹8,682/quintal
+- Urad: ₹7,400/quintal
+
+RABI 2024–25 MSP (Sample):
+- Wheat: ₹2,275/quintal
+- Barley: ₹1,735/quintal
+- Gram: ₹5,440/quintal
+- Masur (Lentil): ₹6,700/quintal
+- Mustard/Rapeseed: ₹5,650/quintal
+- Safflower: ₹5,800/quintal
+
+PROCUREMENT AGENCIES:
+- Wheat and Rice: FCI (Food Corporation of India), state agencies
+- Pulses and Oilseeds: NAFED, NCCF
+- Cotton: CCI (Cotton Corporation of India)
+
+---
+
+## KISAN CALL CENTER (KCC)
+Helpline: 1800-180-1551 (Toll-Free, 24×7)
+- Agricultural advice in 22 languages
+- Connects to subject matter specialists
+- Queries answered within minutes
+- Follow-up in 48 hours for complex queries
+
+DIGITAL PLATFORMS:
+- mKisan Portal: mkisan.gov.in – SMS advisories to registered farmers
+- Kisan Suvidha App: weather, market prices, crop advisor
+- Pusa Krishi App: ICAR varieties and technologies
+- AgriMarket App: Commodity prices in mandis within 50 km

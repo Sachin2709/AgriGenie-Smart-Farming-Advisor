@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block title %}Weather Dashboard – AgriGenie{% endblock %}
+{% block page_title %}🌤 Weather Dashboard{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <h2 class="ag-page-heading">🌤 Weather & Farming Advisory</h2>
+  <p class="ag-page-subheading">Real-time weather data with AI-powered farming advisory for today's conditions.</p>
+</div>
+
+<!-- Weather Hero Card -->
+<div class="ag-weather-card mb-4">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <div style="font-size:5rem;font-weight:900;line-height:1">{{ weather.temperature }}°C</div>
+      <div style="font-size:1.3rem;opacity:.9">{{ weather.description }}</div>
+      <div style="opacity:.75;font-size:.9rem;margin-top:4px">📍 {{ weather.location }}</div>
+      {% if weather.source == 'mock' %}
+      <div style="opacity:.5;font-size:.72rem;margin-top:4px">⚠️ Demo data – Add OPENWEATHER_API_KEY for live data</div>
+      {% endif %}
+    </div>
+    <div class="col-md-4 text-center py-3 py-md-0">
+      <div class="row g-3">
+        <div class="col-6">
+          <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px">
+            <div style="font-size:.72rem;opacity:.7;text-transform:uppercase;letter-spacing:.5px">Feels Like</div>
+            <div style="font-size:1.5rem;font-weight:700">{{ weather.feels_like }}°C</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px">
+            <div style="font-size:.72rem;opacity:.7;text-transform:uppercase;letter-spacing:.5px">Humidity</div>
+            <div style="font-size:1.5rem;font-weight:700">{{ weather.humidity }}%</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px">
+            <div style="font-size:.72rem;opacity:.7;text-transform:uppercase;letter-spacing:.5px">Wind</div>
+            <div style="font-size:1.5rem;font-weight:700">{{ weather.wind_speed }} km/h</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px">
+            <div style="font-size:.72rem;opacity:.7;text-transform:uppercase;letter-spacing:.5px">Season</div>
+            <div style="font-size:1.1rem;font-weight:700">
+              {% set m = now.month if now else 7 %}
+              {% if 6 <= m <= 10 %}☔ Kharif{% elif 11 <= m or m <= 3 %}❄️ Rabi{% else %}☀️ Zaid{% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mt-3 mt-md-0">
+      <div style="background:rgba(255,255,255,.12);border-radius:12px;padding:16px">
+        <div style="font-size:.8rem;opacity:.7;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px">Get Advisory For</div>
+        <input type="text" id="wxLocation" class="ag-input" style="margin-bottom:8px;background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:#fff"
+          value="{{ weather.location }}" placeholder="Enter location…">
+        <input type="text" id="wxCrop" class="ag-input" style="margin-bottom:10px;background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);color:#fff"
+          value="{{ profile.primary_crops.split(',')[0].strip() if profile and profile.primary_crops else '' }}"
+          placeholder="Your crop (optional)">
+        <button class="btn btn-light btn-sm w-100 fw-bold" style="color:#1b5e20;border-radius:8px" onclick="getWeatherAdvisory()">
+          🌾 Get AI Advisory
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Farming Conditions Assessment -->
+<div class="row g-3 mb-4">
+  {% set conditions = [
+    ('🌱', 'Field Work', weather.wind_speed < 30 and weather.description not in ['Heavy Rain','Thunderstorm'], 'Suitable today'),
+    ('💧', 'Irrigation Need', weather.humidity < 70, 'Consider irrigation'),
+    ('🐛', 'Pest Risk', weather.humidity > 75 and weather.temperature > 25, 'Monitor crops'),
+    ('🌾', 'Spraying', weather.wind_speed < 15 and 'Rain' not in weather.description, 'OK to spray'),
+    ('🚜', 'Harvesting', 'Rain' not in weather.description and weather.humidity < 70, 'Good conditions'),
+    ('🌱', 'Sowing', 'Rain' in weather.description or weather.humidity > 80, 'Good for sowing'),
+  ] %}
+  {% for icon, label, is_ok, ok_msg in conditions %}
+  <div class="col-6 col-md-4 col-lg-2">
+    <div style="background:var(--ag-surface);border:1px solid var(--ag-border);border-radius:10px;padding:14px;text-align:center">
+      <div style="font-size:1.8rem;margin-bottom:6px">{{ icon }}</div>
+      <div style="font-size:.78rem;font-weight:700;color:var(--ag-text)">{{ label }}</div>
+      <div style="font-size:.72rem;margin-top:4px;font-weight:600;color:{{ '#22c55e' if is_ok else '#ef4444' }}">
+        {{ '✅ ' + ok_msg if is_ok else '⚠️ Not Ideal' }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- AI Advisory Result -->
+<div class="ag-card">
+  <div class="ag-card-header">
+    <h6 class="ag-card-title">🤖 AI Weather-Based Farm Advisory</h6>
+    <span style="font-size:.75rem;color:var(--ag-muted)">IBM watsonx.ai + RAG Knowledge Base</span>
+  </div>
+  <div class="ag-card-body">
+    <div id="weatherResult">
+      <div class="text-center py-4" style="color:var(--ag-muted)">
+        <p>Click <strong>Get AI Advisory</strong> above for personalized weather-based farming advice.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Inject current time for season detection
+const now = new Date();
+
+async function getWeatherAdvisory() {
+  await queryAI("/api/weather-advisory", {
+    location: document.getElementById("wxLocation").value,
+    crop:     document.getElementById("wxCrop").value,
+  }, "weatherResult", "🌤 Generating weather-based farming advisory…");
+}
+
+// Auto-load advisory on page load
+window.addEventListener("load", getWeatherAdvisory);
+</script>
+{% endblock %}

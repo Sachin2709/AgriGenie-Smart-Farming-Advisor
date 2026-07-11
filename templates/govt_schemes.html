@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}Government Schemes – AgriGenie{% endblock %}
+{% block page_title %}🏛 Government Schemes{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <h2 class="ag-page-heading">🏛 Government Agriculture Schemes</h2>
+  <p class="ag-page-subheading">Explore central and state government schemes, check eligibility, and get step-by-step application guides.</p>
+</div>
+
+<div class="row g-4">
+  <!-- Scheme Cards -->
+  <div class="col-lg-8">
+    <div class="row g-3">
+      {% set schemes = [
+        ("PM-KISAN", "💰", "#22c55e", "₹6,000/year income support to all landholder farmers in 3 installments of ₹2,000",
+         "All landholder farmers with cultivable land", "pm-kisan.gov.in"),
+        ("PMFBY", "🛡", "#3b82f6", "Comprehensive crop insurance. Farmers pay only 2% (Kharif) / 1.5% (Rabi) premium",
+         "All farmers growing notified crops", "pmfby.gov.in"),
+        ("Soil Health Card", "🪨", "#f59e0b", "Free soil testing of 12 parameters with crop-specific fertilizer recommendations",
+         "All farmers — visit nearest soil testing lab", "soilhealth.dac.gov.in"),
+        ("Kisan Credit Card", "💳", "#8b5cf6", "Low-interest revolving credit for crop production, post-harvest, allied activities. 4% effective interest",
+         "All farmers; apply at nearest bank", "kcc.gov.in"),
+        ("PMKSY Micro-irrigation", "💧", "#06b6d4", "45–90% subsidy on drip and sprinkler irrigation systems",
+         "All farmers; priority to small/marginal/SC/ST", "pmksy.gov.in"),
+        ("PKVY", "🌿", "#22c55e", "₹50,000/ha for 3 years to promote organic farming through cluster approach",
+         "Cluster of 50 farmers with 50 acres minimum", "pgsindia-ncof.gov.in"),
+        ("e-NAM", "🏪", "#f97316", "Online trading platform for agricultural commodities across 1000+ mandis",
+         "All farmers; register with Aadhaar + bank account", "enam.gov.in"),
+        ("RKVY-RAFTAAR", "🚀", "#ec4899", "₹25 lakh to ₹2 crore for agri-entrepreneurs and startups",
+         "Agri-entrepreneurs and FPOs", "rkvy.nic.in"),
+      ] %}
+      {% for name, icon, color, desc, eligibility, website in schemes %}
+      <div class="col-md-6">
+        <div class="ag-card" style="border-top:3px solid {{ color }};height:100%">
+          <div class="ag-card-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+              <span style="font-size:1.5rem">{{ icon }}</span>
+              <h6 style="font-weight:800;margin:0;color:var(--ag-text)">{{ name }}</h6>
+            </div>
+            <p style="font-size:.85rem;color:var(--ag-muted);margin-bottom:10px;line-height:1.5">{{ desc }}</p>
+            <div style="font-size:.78rem;color:var(--ag-text);background:var(--ag-bg);padding:8px;border-radius:6px;margin-bottom:10px">
+              <strong>✅ Eligibility:</strong> {{ eligibility }}
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-sm" style="background:{{ color }};color:#fff;border-radius:6px;font-size:.78rem;font-weight:600"
+                onclick="getSchemeDetails('{{ name }}')">
+                📋 Get Details
+              </button>
+              <a href="https://{{ website }}" target="_blank" class="btn btn-outline-secondary btn-sm" style="border-radius:6px;font-size:.78rem">
+                🔗 Official
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- AI Scheme Advisor -->
+  <div class="col-lg-4">
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">🤖 AI Scheme Advisor</h6>
+      </div>
+      <div class="ag-card-body">
+        <div class="ag-form-group">
+          <label class="ag-form-label">Select Scheme</label>
+          <select id="schemeName" class="ag-input">
+            <option value="PM-KISAN">PM-KISAN (Income Support)</option>
+            <option value="PMFBY">PMFBY (Crop Insurance)</option>
+            <option value="Soil Health Card">Soil Health Card</option>
+            <option value="Kisan Credit Card">Kisan Credit Card (KCC)</option>
+            <option value="PMKSY">PMKSY (Drip/Sprinkler Subsidy)</option>
+            <option value="PKVY Organic Farming">PKVY Organic Farming</option>
+            <option value="e-NAM">e-NAM Market Platform</option>
+            <option value="RKVY-RAFTAAR">RKVY-RAFTAAR Startup Fund</option>
+          </select>
+        </div>
+        <button class="btn-ag w-100 justify-content-center" onclick="getSchemeDetails()">
+          🏛 Check Eligibility & Process
+        </button>
+      </div>
+    </div>
+
+    <div class="ag-card mt-3">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📞 Important Helplines</h6>
+      </div>
+      <div class="ag-card-body p-3">
+        {% for name, number, desc in [
+          ('Kisan Call Center', '1800-180-1551', 'Farming advice in 22 languages, 24×7, free'),
+          ('PM-KISAN Helpline', '155261', 'PM-KISAN scheme queries'),
+          ('Soil Health Card', '1800-180-1551', 'Soil testing and SHC queries'),
+          ('PMFBY Helpline', '14447', 'Crop insurance claims'),
+          ('Poison Control', '1800-11-6117', 'Pesticide poisoning emergency'),
+        ] %}
+        <div style="padding:8px 0;border-bottom:1px solid var(--ag-border)">
+          <div style="font-weight:700;font-size:.85rem">{{ name }}</div>
+          <div style="color:var(--ag-primary);font-weight:800;font-size:1rem">{{ number }}</div>
+          <div style="font-size:.75rem;color:var(--ag-muted)">{{ desc }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- AI Result -->
+    <div class="ag-card mt-3" id="schemeResultCard" style="display:none">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📋 Scheme Details</h6>
+      </div>
+      <div class="ag-card-body">
+        <div id="schemeResult"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+async function getSchemeDetails(schemeName) {
+  if (schemeName) document.getElementById("schemeName").value = schemeName;
+  const scheme = document.getElementById("schemeName").value;
+  document.getElementById("schemeResultCard").style.display = "block";
+  document.getElementById("schemeResultCard").scrollIntoView({behavior:"smooth"});
+  const payload = { scheme: scheme };
+  await queryAI("/api/scheme-eligibility", payload, "schemeResult",
+    "🏛 Checking eligibility and gathering scheme details…");
+}
+</script>
+{% endblock %}

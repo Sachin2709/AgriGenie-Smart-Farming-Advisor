@@ -1,0 +1,187 @@
+IRRIGATION PRACTICES AND WATER MANAGEMENT IN INDIA
+===================================================
+
+## WATER SCARCITY IN INDIA
+India has 4% of world's freshwater but 18% of world's population. Agriculture uses 70–80% of total freshwater. Increasing water productivity (more crop per drop) is critical for food security.
+
+INDIA'S IRRIGATION STATUS:
+- Total irrigated area: ~70 million ha (48% of net sown area)
+- Major sources: Canals (38%), groundwater (62%), tanks, ponds
+- Water stressed states: Maharashtra, Gujarat, Rajasthan, Karnataka, AP, Telangana
+- Per capita water availability declining from 5177 m³ (1951) to ~1544 m³ (2021)
+
+## MAJOR IRRIGATION METHODS
+
+### 1. FLOOD/SURFACE IRRIGATION (Traditional)
+TYPES:
+- Check basin: flat land; tree crops; orchards; efficiency 35–40%
+- Border strip: sloping land; field crops (wheat, maize); efficiency 40–50%
+- Furrow: row crops (cotton, sugarcane, vegetables); efficiency 50–60%
+
+WHEN TO USE:
+- Impervious clay soils with low infiltration rates
+- Rice paddy (requires standing water)
+- Areas with cheap and abundant water supply
+- Traditional farmers with low capital
+
+DISADVANTAGES:
+- Very low water use efficiency (35–60%)
+- Waterlogging and salinity risks
+- Uneven water distribution
+
+### 2. SPRINKLER IRRIGATION
+TYPES:
+- Portable: farmers move the system; cost ₹40,000–80,000/ha
+- Semi-permanent: lateral moves on mainline
+- Centre pivot: large scale; grain crops; efficiency 70–80%
+- Micro-sprinkler/mini-sprinkler: orchard crops; efficiency 75–85%
+
+SUITABLE CROPS:
+- Wheat, maize, groundnut, vegetables, fodder crops, plantation crops
+- Sandy soils (cannot hold flood irrigation)
+- Undulating topography (cannot channel irrigation)
+
+WATER SAVING: 30–50% compared to flood irrigation
+
+OPERATION:
+- Operating pressure: 1.5–3.5 kg/cm²
+- Application rate: 5–10 mm/hour
+- Irrigate in early morning or evening; avoid windy conditions
+
+GOVERNMENT SUBSIDY: 50–90% subsidy available under PMKSY (Pradhan Mantri Krishi Sinchai Yojana)
+
+### 3. DRIP IRRIGATION (MICRO-IRRIGATION)
+Most efficient irrigation method; 95% water use efficiency
+
+COMPONENTS:
+- Water source → Pump → Filter unit → Fertigation unit → Main line → Sub-main → Lateral lines → Drippers/emitters
+
+DRIPPER TYPES:
+- Inline drippers: embedded in lateral; 2–4 LPH discharge
+- On-line drippers: plugged into lateral; 2–8 LPH
+- Pressure compensating: uniform discharge on slopes
+
+SUITABLE CROPS:
+- Vegetables: tomato, pepper, cucumber (60–80% water saving)
+- Orchards: mango, citrus, pomegranate, banana, grapes (40–60% saving)
+- Sugarcane: 40–50% water saving + 10–15% yield increase
+- Cotton: 30–40% water saving
+- NOT suitable for: paddy, broadcast crops (wheat, maize in traditional system)
+
+SPACING STANDARDS:
+- Tomato/Pepper: 45 cm × 45 cm emitter spacing; 60–100 cm row spacing
+- Sugarcane: 1 lateral per 1.5 m row; 50 cm emitter spacing
+- Banana: 1 dripper per plant; 2 LPH at 0.7 kg/cm² pressure
+- Mango: 4–8 drippers per tree; 8 LPH each
+
+FERTIGATION WITH DRIP:
+- Apply 100% P and K as basal
+- N in 8–10 splits through drip
+- Use water-soluble fertilizers: Urea, MAP, MKP, CAN, SOP
+- Venturi injector (no electricity) or fertigation pump
+- Flush system after each fertigation
+
+MAINTENANCE:
+- Weekly: Check pressure gauges, clogging, leaks
+- Monthly: Acid washing (HCl or H2SO4 1%) for mineral deposits
+- Seasonal: End-of-season flush; check for rodent damage
+
+COST AND ECONOMICS (TOMATO EXAMPLE):
+- System cost: ₹80,000–1,20,000/ha
+- Water saving: 50–60% (saves ₹8,000–15,000/ha in electricity)
+- Yield increase: 20–30% (₹20,000–40,000 extra income)
+- Payback period: 2–3 years
+- PMKSY subsidy: 45% for general farmers; 55% for SC/ST/small/marginal farmers
+
+## CROP WATER REQUIREMENTS
+
+CRITICAL IRRIGATION STAGES AND WATER REQUIREMENT:
+
+WHEAT (Total: 400–500 mm; 4–6 irrigations):
+1. Crown Root Initiation (CRI): 20–25 DAS – most critical; 50 mm
+2. Tillering: 40–45 DAS; 50 mm
+3. Jointing: 65–70 DAS; 60 mm
+4. Flowering (Heading): 90–95 DAS – very critical; 60 mm
+5. Grain filling (Dough stage): 105–110 DAS; 60 mm
+6. Milky stage: 120 DAS (light irrigation); 40 mm
+
+RICE (Total: 1200–2000 mm):
+- Maintain 5 cm standing water during vegetative stage
+- Alternate Wetting and Drying (AWD): drain when water level drops 15 cm below surface; refill to 5 cm
+- AWD saves 30% water without yield loss
+- Drain field 10 days before harvest for mechanical harvesting
+
+SUGARCANE (Total: 1800–2500 mm; 40–60 irrigations):
+- Germination phase: light but frequent irrigation (5-7 day interval)
+- Grand growth phase (June–September): irrigation at 10–14 day interval
+- Maturity phase: stop irrigation 4–6 weeks before harvest
+
+MAIZE (Total: 500–600 mm; 4–6 irrigations):
+- Critical stages: germination, 6-leaf stage, tasseling (most critical), grain filling
+- Tasseling drought causes 50% yield loss
+
+COTTON (Total: 500–700 mm; 6–8 irrigations):
+- First irrigation: pre-sowing (7–10 days before sowing)
+- Critical: boll formation and boll filling
+- Avoid irrigation during heavy boll opening period
+
+## WATER HARVESTING AND CONSERVATION
+
+FARM POND:
+- Size: 30×30×3 m for 10 ha catchment
+- Cost: ₹2–5 lakh; government subsidy 50–100% under MGNREGS, RKVY
+- Captures 80–100 hours of monsoon runoff
+- Provides life-saving irrigation during dry spells
+- Can be used for fish culture (additional income)
+
+WATERSHED MANAGEMENT:
+- Contour bunding: prevents soil erosion on slopes > 1%
+- Check dams: small structures across seasonal streams
+- Percolation tanks: recharge groundwater
+- Vegetative barriers: grass strips along contours
+
+RAINWATER HARVESTING:
+- Rooftop collection: 10 mm rainfall × 100 m² roof = 1000 L water
+- Farm pond on 1 ha: captures 400–600 m³ per cm of rainfall
+
+## IRRIGATION SCHEDULING METHODS
+
+SOIL MOISTURE-BASED:
+- Tensiometer: measures soil water tension (0–100 centibars)
+  * Irrigate when: Sandy soil > 40 cb; Loam > 50 cb; Clay > 60 cb
+- Gravimetric method: 100 g soil; weigh before and after oven-drying at 105°C for 24h
+- Soil moisture sensor (capacitance type): digital, accurate, expensive
+
+PAN EVAPORATION-BASED:
+- Measure daily Class A pan evaporation (Epan)
+- Irrigation interval = (Field capacity − current moisture) / (Crop coefficient × Epan)
+- Crop coefficient (Kc): wheat = 0.6–1.1; rice = 1.05–1.2; maize = 0.7–1.2
+
+LEAF WATER STATUS:
+- Leaf rolling: mild stress indicator in maize and sorghum
+- Leaf water potential: precision measurement; < -12 bars indicates stress
+
+## PMKSY (PRADHAN MANTRI KRISHI SINCHAI YOJANA)
+OBJECTIVES:
+- "Har Khet Ko Pani" (Water to every field)
+- "More Crop Per Drop" (micro-irrigation promotion)
+- Creating new water sources, distribution network, micro-irrigation
+
+COMPONENTS:
+1. Accelerated Irrigation Benefits Programme (AIBP): completing incomplete major/medium projects
+2. Har Khet Ko Pani: groundwater development, watershed management
+3. Per Drop More Crop: micro-irrigation, water use efficiency
+4. Watershed Development: conservation and rainwater harvesting
+
+SUBSIDY RATES (Per Drop More Crop):
+- General farmers: 45% of project cost (drip/sprinkler)
+- SC/ST farmers: 55% of project cost
+- Small/Marginal farmers: additional 10% subsidy in many states
+- State governments add additional subsidy (total can reach 75–90%)
+
+## GROUNDWATER MANAGEMENT
+- Over-exploited blocks in India: 1,186 (16%)
+- Critical blocks: 253 (3.5%)
+- Semi-critical: 681 (9%)
+- Atal Bhujal Yojana: ₹6,000 crore for groundwater conservation in 7 states
+- Encourage switch from paddy to less water-intensive crops in Punjab, Haryana

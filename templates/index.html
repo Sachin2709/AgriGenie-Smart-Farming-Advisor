@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}AgriGenie AI – Smart Farming Advisor{% endblock %}
+
+{% block public_content %}
+<!-- Landing Page -->
+<div class="ag-hero">
+  <div class="container position-relative" style="z-index:1">
+    <div class="row align-items-center min-vh-100 py-5">
+      <div class="col-lg-6 text-white">
+        <div class="mb-3">
+          <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:6px 16px;border-radius:20px;font-size:.82rem;letter-spacing:.5px">
+            🤖 Powered by IBM watsonx.ai Granite
+          </span>
+        </div>
+        <h1 style="font-size:3.2rem;font-weight:900;line-height:1.1;margin-bottom:20px">
+          🌾 AgriGenie AI<br>
+          <span style="font-size:1.8rem;font-weight:400;opacity:.85">Smart Farming Advisor</span>
+        </h1>
+        <p style="font-size:1.1rem;opacity:.85;max-width:520px;margin-bottom:32px;line-height:1.7">
+          Get personalized farming advice powered by AI. Crop recommendations, soil analysis,
+          weather advisories, pest diagnosis, mandi prices, and government schemes — all in one place.
+          <strong style="opacity:1">Kisan ka dost, AI se baat karo!</strong>
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <a href="/register" class="btn btn-light btn-lg fw-bold" style="border-radius:10px;color:#1b5e20">
+            🚀 Start Free
+          </a>
+          <a href="/login" class="btn btn-outline-light btn-lg" style="border-radius:10px">
+            🔑 Login
+          </a>
+        </div>
+        <div class="d-flex flex-wrap gap-4" style="opacity:.8;font-size:.85rem">
+          <div>✅ RAG Knowledge Base</div>
+          <div>✅ IBM Granite AI</div>
+          <div>✅ 10+ Farm Tools</div>
+          <div>✅ Free to use</div>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-5 mt-lg-0">
+        <div class="row g-3">
+          {% set features = [
+            ("🌱","Crop Advisor","Get top crop recommendations based on soil, location, and season."),
+            ("🪨","Soil Health","Analyze soil parameters and get correction guidance."),
+            ("🌤","Weather Advisory","Weather-based farming advice and irrigation scheduling."),
+            ("🐛","Pest & Disease","AI-powered pest diagnosis with IPM solutions."),
+            ("💧","Irrigation Planner","Save water with smart irrigation scheduling."),
+            ("📊","Mandi Prices","Live crop prices and best-time-to-sell analysis."),
+            ("🏛","Govt Schemes","PM-KISAN, PMFBY, SHC and 10+ scheme guides."),
+            ("📅","Farm Calendar","Monthly operation calendar for all major crops.")
+          ] %}
+          {% for icon, title, desc in features %}
+          <div class="col-6">
+            <div class="ag-feature-card" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:20px;backdrop-filter:blur(10px);transition:all .25s">
+              <div class="ag-feature-icon" style="font-size:1.8rem;margin-bottom:10px">{{ icon }}</div>
+              <div style="color:#fff;font-weight:700;font-size:.9rem;margin-bottom:4px">{{ title }}</div>
+              <div style="color:rgba(255,255,255,.65);font-size:.78rem;line-height:1.5">{{ desc }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Bar -->
+<div style="background:#1b5e20;color:#fff;padding:20px 0;border-top:1px solid rgba(255,255,255,.1)">
+  <div class="container">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-3">
+        <div style="font-size:1.8rem;font-weight:800">10+</div>
+        <div style="opacity:.7;font-size:.82rem">Farming Tools</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div style="font-size:1.8rem;font-weight:800">7</div>
+        <div style="opacity:.7;font-size:.82rem">Knowledge Domains</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div style="font-size:1.8rem;font-weight:800">RAG</div>
+        <div style="opacity:.7;font-size:.82rem">AI Knowledge Base</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div style="font-size:1.8rem;font-weight:800">Free</div>
+        <div style="opacity:.7;font-size:.82rem">No Subscription</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

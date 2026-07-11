@@ -1,0 +1,158 @@
+FERTILIZER RECOMMENDATIONS FOR MAJOR INDIAN CROPS
+===================================================
+
+## INTEGRATED NUTRIENT MANAGEMENT (INM)
+INM is the judicious use of chemical fertilizers along with organic manures, biofertilizers, and crop residues to maintain soil fertility and maximize yield sustainably.
+
+PRINCIPLES:
+1. Soil test-based fertilizer application (STBF)
+2. Balanced fertilization – right nutrient, right rate, right time, right place (4R)
+3. Combine organic + inorganic sources
+4. Use biofertilizers to enhance nutrient use efficiency (NUE)
+
+## FERTILIZER DOSE RECOMMENDATIONS (kg/ha)
+
+WHEAT:
+- N:P:K = 120:60:40 (irrigated, timely sown)
+- N:P:K = 80:40:30 (rainfed)
+- Sulfur: 20 kg/ha as SSP or gypsum
+- Zinc: 25 kg ZnSO4/ha if deficient
+- Split N: 1/3 basal + 1/3 at CRI (21 DAS) + 1/3 at jointing
+- Full P and K at sowing as basal
+
+RICE (PADDY):
+- N:P:K = 100-120:40-50:40 (high yielding varieties)
+- N:P:K = 60:30:30 (local/medium varieties)
+- Zinc: 25 kg ZnSO4/ha as basal if Khaira observed
+- Split N: 1/3 basal + 1/3 at tillering + 1/3 at panicle initiation
+- Avoid excess N: promotes spindly growth and lodging
+
+MAIZE:
+- N:P:K = 150:60:60 (hybrids)
+- N:P:K = 80:40:40 (composites)
+- Zinc: 25 kg ZnSO4/ha as basal
+- Split N: 1/3 basal + 1/3 at knee height (V5-V6) + 1/3 at tasseling (V12)
+
+COTTON:
+- N:P:K = 100:50:50 (irrigated Bt cotton)
+- N:P:K = 60:30:30 (rainfed)
+- Sulfur: 30 kg/ha (critical for quality fiber)
+- Boron: 1–1.5 kg/ha foliar (boric acid 0.2%) at bud formation
+- Split N: 4 splits – 25% each at sowing, 45 DAS, 70 DAS, 100 DAS
+
+SUGARCANE:
+- N:P:K = 250:60:120 (irrigated)
+- N:P:K = 150:60:60 (rainfed)
+- Sulfur: 30 kg/ha
+- Zinc: 25 kg ZnSO4/ha
+- Split N: 4–6 splits over the season
+
+SOYBEAN:
+- N:P:K = 20:80:40 (starter N only; relies on N-fixation)
+- Sulfur: 20 kg/ha as SSP or gypsum
+- Rhizobium + PSB seed treatment mandatory
+- Foliar urea 2% at pod formation if yellowing observed
+
+GROUNDNUT:
+- N:P:K = 20:60:40
+- Calcium: 400 kg gypsum/ha applied at pegging stage (critical!)
+- Sulfur: 20 kg/ha
+- Boron: 1–1.5 kg/ha foliar
+
+POTATO:
+- N:P:K = 150:120:120
+- Split N: 1/2 at planting + 1/2 at earthing up (30 DAS)
+- Calcium: 2–3 kg CaCl2/ha foliar for hollow heart prevention
+- Boron: 0.2% borax spray at tuber initiation
+
+TOMATO:
+- N:P:K = 100:80:80
+- Calcium + Boron: foliar spray to prevent blossom end rot
+- Split N: 30% basal + 30% at first flower + 20% at first fruit + 20% at harvest
+
+ONION:
+- N:P:K = 100:50:50
+- Sulfur: 20 kg/ha (critical for flavor and storage quality)
+- Split N: 1/3 at transplanting + 1/3 at 30 DAS + 1/3 at 45 DAS
+
+MUSTARD/RAPESEED:
+- N:P:K = 80:40:20
+- Sulfur: 30 kg/ha (critical – mustard family requires high S)
+- Boron: 1 kg/ha foliar at bud formation
+
+CHICKPEA (Gram):
+- N:P:K = 20:40:20 (starter dose)
+- Rhizobium seed treatment: 200 g/kg seed
+- Zinc: 25 kg ZnSO4/ha if deficient
+- Avoid excess N – suppresses nodulation
+
+BANANA:
+- N:P:K = 200:60:300 per plant annually
+- Split into 8–10 doses (fertigation preferred)
+- Micro: Zn (0.5%), Fe (0.5%), B (0.1%) foliar
+- Magnesium: 100 g MgSO4/plant if deficiency
+
+## ORGANIC SOURCES OF NUTRIENTS
+
+FYM (Farm Yard Manure):
+- Nutrient content: 0.5% N, 0.25% P2O5, 0.5% K2O
+- Application: 10–15 t/ha; incorporate 3–4 weeks before sowing
+- Enhances soil organic matter, water holding capacity
+
+VERMICOMPOST:
+- Nutrient content: 2–3% N, 1.5–2% P2O5, 1.5–2% K2O + micronutrients
+- Application: 3–5 t/ha; can partially replace chemical fertilizers
+- Safer for soil biology
+
+COMPOST (NADEP method):
+- C:N ratio should be 30:1 for good decomposition
+- Nutrient content similar to FYM but more stable
+- Application: 5–10 t/ha
+
+GREEN MANURE CROPS AND N-CONTRIBUTION:
+- Dhaincha (Sesbania bispinosa): 80–100 kg N/ha equivalent
+- Sunhemp (Crotalaria juncea): 60–80 kg N/ha
+- Cowpea: 40–60 kg N/ha
+- Sesbania rostrata: 100–120 kg N/ha
+
+## FERTIGATION RECOMMENDATIONS (DRIP IRRIGATION)
+
+FERTIGATION SCHEDULE FOR TOMATO (per week, per hectare):
+- Week 1–2: 5 kg Urea + 3 kg MAP
+- Week 3–6: 8 kg Urea + 5 kg MKP + 3 kg SOP
+- Week 7–10: 10 kg Urea + 8 kg MKP + 5 kg CAN
+- Week 11–14: 5 kg Urea + 10 kg MKP + 8 kg CAN
+- pH of fertigation solution: 5.5–6.5
+- EC of fertigation solution: 1.5–2.5 dS/m
+
+## FERTILIZER TIMING CALENDAR (NORTH INDIA)
+
+RABI SEASON (Oct–Apr):
+- October: Land preparation; apply FYM/compost
+- November: Basal dose at sowing (P, K, Zn, 1/3 N)
+- December: First split N application at CRI stage
+- January: Second split N at jointing; watch for S, Zn deficiency
+- February–March: Foliar micronutrient spray if needed
+- April: Harvest; stubble management
+
+KHARIF SEASON (Jun–Oct):
+- May–June: Land preparation; green manure incorporation
+- June–July: Basal dose at sowing/transplanting
+- July–August: First split N; pest-disease monitoring
+- August–September: Second split N; P-K top dressing if needed
+- September–October: Harvest; maintain stubble
+
+## SUBSIDY INFORMATION
+
+GOVERNMENT FERTILIZER SUBSIDY (as per NBS scheme):
+- Urea: Fixed MRP ₹242 per 45 kg bag (highly subsidized)
+- DAP: MRP ₹1,350 per 50 kg bag
+- MOP: MRP ₹1,700 per 50 kg bag
+- Complex fertilizers: Variable subsidy under NBS
+- Bio-fertilizers: Additional subsidy under Paramparagat Krishi Vikas Yojana (PKVY)
+
+SOIL HEALTH CARD (SHC) SCHEME:
+- Free soil testing at government laboratories
+- Crop-specific fertilizer recommendations on card
+- Reduces over-fertilization by 20–30%
+- Increases farmer income by ₹5,000–8,000/ha

@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}Mandi Prices – AgriGenie{% endblock %}
+{% block page_title %}📊 Mandi Prices{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <h2 class="ag-page-heading">📊 Mandi Price Dashboard</h2>
+  <p class="ag-page-subheading">Live mandi prices, market trends, and AI-powered sell/hold analysis for maximum profit.</p>
+</div>
+
+<!-- Price Overview -->
+<div class="row g-3 mb-4">
+  {% for crop, data in prices.items() | list | sort(attribute='0') %}
+  <div class="col-6 col-md-4 col-lg-3">
+    <div class="ag-card" style="border-top:3px solid {{ '#22c55e' if data.trend == 'up' else '#ef4444' if data.trend == 'down' else '#f59e0b' if data.trend == 'volatile' else '#6b7280' }}">
+      <div class="ag-card-body py-3 px-4">
+        <div style="font-size:.8rem;color:var(--ag-muted);font-weight:600;text-transform:uppercase">{{ crop }}</div>
+        <div style="font-size:1.5rem;font-weight:800;color:var(--ag-text)">₹{{ "{:,}".format(data.modal) }}</div>
+        <div style="font-size:.75rem;color:var(--ag-muted)">per {{ data.unit }}</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+          <span style="font-size:.72rem;color:var(--ag-muted)">₹{{ data.min }}–{{ data.max }}</span>
+          <span class="ag-badge badge-{{ data.trend }}">
+            {% if data.trend == 'up' %}↑{% elif data.trend == 'down' %}↓{% elif data.trend == 'volatile' %}~{% else %}→{% endif %}
+            {{ data.trend|title }}
+          </span>
+        </div>
+        <button class="btn btn-outline-success btn-sm w-100 mt-2" style="font-size:.72rem;border-radius:6px"
+          onclick="analyzeMarket('{{ crop }}')">
+          📈 Analyze
+        </button>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="row g-4">
+  <!-- Market Analysis Tool -->
+  <div class="col-lg-4">
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📊 Sell or Hold Analysis</h6>
+      </div>
+      <div class="ag-card-body">
+        <div class="ag-form-group">
+          <label class="ag-form-label">Crop</label>
+          <select id="mandiCrop" class="ag-input">
+            {% for crop in prices.keys() %}
+            <option value="{{ crop }}">{{ crop }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="ag-form-group">
+          <label class="ag-form-label">Quantity (Quintals)</label>
+          <input type="number" id="mandiQty" class="ag-input" value="10" min="1" step="1">
+        </div>
+        <div class="ag-form-group">
+          <label class="ag-form-label">Your State</label>
+          <input type="text" id="mandiState" class="ag-input"
+            value="{{ profile.state or '' }}" placeholder="e.g. Punjab, Maharashtra">
+        </div>
+        <button class="btn-ag w-100 justify-content-center" onclick="getMarketAnalysis()">
+          📊 Get Market Analysis
+        </button>
+      </div>
+    </div>
+
+    <!-- MSP Reference -->
+    <div class="ag-card mt-3">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📋 MSP 2024–25</h6>
+        <span style="font-size:.75rem;color:var(--ag-muted)">Min Support Price</span>
+      </div>
+      <div class="ag-card-body p-0">
+        <table style="width:100%;font-size:.82rem;border-collapse:collapse">
+          {% for crop, msp in [('Wheat','₹2,275'),('Paddy (Common)','₹2,300'),('Maize','₹2,225'),('Soybean','₹4,892'),('Cotton (Long)','₹7,521'),('Groundnut','₹6,783'),('Tur Dal','₹7,550'),('Mustard','₹5,650')] %}
+          <tr style="border-top:1px solid var(--ag-border)">
+            <td style="padding:8px 12px;font-weight:600">{{ crop }}</td>
+            <td style="padding:8px 12px;color:var(--ag-primary);font-weight:700">{{ msp }}/q</td>
+          </tr>
+          {% endfor %}
+        </table>
+        <div style="padding:10px 12px;font-size:.75rem;color:var(--ag-muted);border-top:1px solid var(--ag-border)">
+          If market price falls below MSP, contact NAFED/FCI for procurement
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Analysis Result -->
+  <div class="col-lg-8">
+    <div class="ag-card h-100">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">🤖 AI Market Analysis</h6>
+      </div>
+      <div class="ag-card-body">
+        <div id="mandiResult">
+          <div class="text-center py-5" style="color:var(--ag-muted)">
+            <div style="font-size:4rem;margin-bottom:16px">📊</div>
+            <p>Select a crop and click <strong>Get Market Analysis</strong><br>
+            to get AI advice on sell/hold/store decisions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Data source note -->
+<div style="text-align:center;margin-top:16px;color:var(--ag-muted);font-size:.78rem">
+  📊 Prices are indicative/demo data. For live prices visit:
+  <a href="https://agmarknet.gov.in" target="_blank" style="color:var(--ag-primary)">agmarknet.gov.in</a> |
+  <a href="https://enam.gov.in" target="_blank" style="color:var(--ag-primary)">enam.gov.in</a>
+</div>
+
+<script>
+async function getMarketAnalysis() {
+  const payload = {
+    crop:     document.getElementById("mandiCrop").value,
+    quantity: parseInt(document.getElementById("mandiQty").value) || 10,
+    state:    document.getElementById("mandiState").value
+  };
+  await queryAI("/api/mandi-analysis", payload, "mandiResult", "📊 Analyzing market trends and price forecasts…");
+}
+
+function analyzeMarket(crop) {
+  document.getElementById("mandiCrop").value = crop;
+  getMarketAnalysis();
+  document.getElementById("mandiResult").scrollIntoView({behavior:"smooth"});
+}
+</script>
+{% endblock %}

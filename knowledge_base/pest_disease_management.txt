@@ -1,0 +1,189 @@
+PEST AND DISEASE MANAGEMENT IN INDIAN AGRICULTURE
+==================================================
+
+## INTEGRATED PEST MANAGEMENT (IPM)
+IPM is a sustainable approach that combines biological, cultural, physical, and chemical methods to minimize pest damage while reducing risks to people and the environment.
+
+IPM HIERARCHY:
+1. Prevention (crop rotation, resistant varieties, sanitation)
+2. Monitoring (scouting, pheromone traps, sticky traps)
+3. Biological control (natural enemies, biopesticides)
+4. Cultural control (field hygiene, timing of operations)
+5. Chemical control (last resort; use selective, less toxic pesticides)
+
+ECONOMIC THRESHOLD LEVEL (ETL):
+- The pest density at which control measures must be taken to prevent economic loss
+- Apply pesticides only when pest population exceeds ETL
+
+## MAJOR PEST MANAGEMENT
+
+FALL ARMY WORM (FAW) – Spodoptera frugiperda (Maize):
+- Identification: Caterpillar with inverted Y on head capsule; 8 spots on abdomen
+- Damage: Skeletonizing of leaves; characteristic window pane feeding
+- ETL: 5% damaged plants or 1 larva per plant
+- IPM Measures:
+  * Pheromone traps: 5–10/ha for monitoring; 50/ha for mass trapping
+  * Egg mass collection and destruction
+  * Release of Trichogramma pretiosum @ 2 lakh/ha
+  * Beauveria bassiana 1 × 10⁸ cfu/ml @ 5g/L spray
+  * Chemical: Spinetoram 11.7% SC @ 0.5 ml/L; Chlorantraniliprole 18.5% SC @ 0.4 ml/L
+  * Emergency: Emamectin benzoate 5% SG @ 0.4 g/L
+
+BROWN PLANT HOPPER (BPH) – Nilaparvata lugens (Rice):
+- Identification: Small brown hoppers; 2–3 mm; both winged and wingless forms
+- Damage: "Hopper burn" – circular patches of dry brown plants; honeydew promotes sooty mold
+- ETL: 10–15 hoppers/hill or 1000/m²
+- IPM Measures:
+  * Resistant varieties: Swarna Sub1, IR-64, TDK-1
+  * Avoid excess N application
+  * Keep drain channels clear
+  * Spray buprofezin 25% SC @ 1.25 ml/L; imidacloprid 17.8% SL @ 0.3 ml/L
+  * Biological: Mirid bugs, spiders as natural enemies
+
+PINK BOLLWORM (PBW) – Pectinophora gossypiella (Cotton):
+- Identification: Pink colored larva inside bolls; rosette flower
+- Damage: Feeding on seeds inside bolls; reduces lint quality
+- ETL: 8–10% rosette flowers or 2 moths/trap/day
+- IPM:
+  * Bt cotton varieties have built-in resistance (Cry1Ac, Cry2Ab)
+  * Pheromone traps: 10–15/ha for monitoring
+  * Sex pheromone confusion technique in heavy infestations
+  * Chlorpyrifos 20% EC @ 2.5 ml/L for severe infestation
+
+WHITEFLY – Bemisia tabaci (Cotton, Vegetables):
+- Identification: Small white winged insects on leaf undersides; excretes honeydew
+- Damage: Direct sap sucking; indirect – transmits yellow mosaic virus (YMV) in soybean
+- ETL: 6–10 adults/leaf
+- IPM:
+  * Yellow sticky traps: 25/ha for monitoring
+  * Reflective mulch deters landing
+  * Neem-based pesticides: Azadirachtin 1% @ 3–5 ml/L
+  * Chemical: Thiamethoxam 25% WG @ 0.3 g/L; Spiromesifen 22.9% SC @ 0.9 ml/L
+  * Avoid: repeated use of neonicotinoids (resistance risk)
+
+APHIDS – Multiple species (Various crops):
+- Damage: Sap sucking; honeydew leads to sooty mold; virus transmission
+- Natural control: Ladybird beetles (Coccinella septempunctata), lacewings
+- Chemical: Dimethoate 30% EC @ 1.5 ml/L; Imidacloprid 17.8% SL @ 0.3 ml/L
+
+STEM BORERS (Rice, Maize):
+- Shoot fly (Atherigona soccata – Sorghum): Dead heart in young plants
+- Yellow stem borer (Scirpophaga incertulas – Rice): Dead heart + white ear
+- IPM: Trichogramma egg parasitoid release; Pheromone traps; Chlorpyrifos granules in leaf whorl
+
+AMERICAN BOLLWORM (ABW) – Helicoverpa armigera (Cotton, Tomato, Chickpea):
+- Most polyphagous pest in India; attacks 180+ crops
+- Damage: Boring into fruiting bodies; circular feeding holes
+- ETL: 5 larvae/10 plants (cotton); 2 larvae/m row (tomato)
+- IPM:
+  * NPV (Nuclear Polyhedrosis Virus): 250 LE/ha sprayed at egg hatching
+  * Trichogramma: 2 lakh/ha release at egg laying
+  * Bt (Bacillus thuringiensis) formulations: 1.5 kg/ha
+  * Chemical: Indoxacarb 14.5% SC @ 0.8 ml/L; Emamectin benzoate 5% SG @ 0.4 g/L
+
+## MAJOR DISEASE MANAGEMENT
+
+WHEAT RUST (Leaf, Stem, Stripe):
+- Causal organism: Puccinia spp. (fungi)
+- Symptoms:
+  * Leaf rust (P. triticina): Orange-brown uredinia on leaves
+  * Stem rust (P. graminis): Large dark brown-black pustules on stem
+  * Stripe/Yellow rust (P. striiformis): Yellow-stripe pustules on leaves
+- Management:
+  * Resistant varieties: HD-2967 (leaf, stem resistant); HD-3086, WH-1105
+  * Seed treatment: Carboxin 37.5% + Thiram 37.5% DS @ 3g/kg seed
+  * Foliar spray at first sign: Propiconazole 25% EC @ 1 ml/L (2–3 sprays, 15-day interval)
+  * Tebuconazole 25.9% EW @ 1 ml/L
+
+RICE BLAST – Magnaporthe oryzae:
+- Symptoms: Diamond/spindle-shaped lesions with gray center and brown border on leaves; neck blast (panicle emergence most critical)
+- Favored by: 25–30°C; high humidity; excess N; heavy dew
+- Management:
+  * Resistant varieties: Improved Samba Mahsuri, MTU-7029
+  * Balanced N fertilization (avoid excess)
+  * Tricyclazole 75% WP @ 0.6 g/L at boot-leaf and neck emergence
+  * Isoprothiolane 40% EC @ 1.5 ml/L
+
+LATE BLIGHT (Potato, Tomato) – Phytophthora infestans:
+- Most devastating plant disease worldwide; Irish famine (1845)
+- Symptoms: Water-soaked lesions rapidly turning brown-black; white mold on leaf undersides in humid conditions
+- Favored by: 15–20°C; >90% RH; leaf wetness > 10 hours
+- Management:
+  * Certified disease-free seed material
+  * Mancozeb 75% WP @ 2.5 g/L (protectant; start before disease appearance in monsoon)
+  * Metalaxyl + Mancozeb 72% WP @ 2.5 g/L (systemic + contact)
+  * Cymoxanil + Mancozeb 72% WP @ 3 g/L
+  * Avoid overhead irrigation; maintain air circulation
+  * 7–10 day spray interval during favorable weather
+
+BACTERIAL WILT – Ralstonia solanacearum (Tomato, Potato, Brinjal):
+- Symptoms: Sudden wilting of plants without yellowing; white-milky bacterial ooze in water from cut stem
+- Soil-borne; spreads through water and tools
+- Management (NO effective chemical cure):
+  * Resistant varieties: Arka Vikas, Arka Rakshak (tomato)
+  * Crop rotation with non-solanaceous crops (4–5 years)
+  * Soil solarization: 6–8 weeks under plastic mulch in May–June
+  * Biofumigation with brassica crops
+  * Trichoderma viride @ 2.5 kg/ha soil treatment
+
+POWDERY MILDEW (Various crops):
+- Symptoms: White powdery coating on leaves, stems, fruits; poor photosynthesis
+- Management:
+  * Wettable sulfur 80% WP @ 3 g/L (most effective for cucurbits, grapes, rose)
+  * Hexaconazole 5% EC @ 2 ml/L
+  * Karathane (Dinocap) 48% EC @ 1 ml/L
+  * Spray in morning; avoid evening sprays in cold weather
+
+## BIOPESTICIDES AND ORGANIC PEST MANAGEMENT
+
+NEEM-BASED PESTICIDES:
+- Azadirachtin 0.15% EC (300 ppm) – 5 ml/L
+- Azadirachtin 0.3% EC (1500 ppm) – 3 ml/L
+- Neem cake: 250 kg/ha soil incorporation for soil pests and nematodes
+- Mode of action: Anti-feedant, growth regulator, ovipositional deterrent
+- Best against: Sucking pests, leaf miners, whitefly, thrips, jassids
+
+BACILLUS THURINGIENSIS (Bt):
+- Bt var. kurstaki: Caterpillars (lepidopterous pests)
+- Bt var. israelensis: Mosquito, fungus gnat larvae
+- Formulation: WP, SC, GR; apply at early instar stage
+- Dose: 1–2 kg/ha (WP); best in evening or cloudy conditions
+
+BEAUVERIA BASSIANA:
+- Entomopathogenic fungus; infects wide range of pests
+- Effective against: FAW, thrips, whitefly, aphids, grasshoppers
+- Dose: 5 g/L (1 × 10⁸ cfu/g); spray in evening; avoid UV exposure
+- Store in cool, dark conditions
+
+TRICHODERMA VIRIDE / T. HARZIANUM:
+- Biocontrol agent for soil-borne diseases
+- Effective against: Fusarium, Pythium, Sclerotinia, Rhizoctonia
+- Seed treatment: 4–6 g/kg seed; Soil application: 2.5 kg/ha with FYM
+
+NUCLEAR POLYHEDROSIS VIRUS (NPV):
+- Helicoverpa NPV (HaNPV): 250 LE/ha for bollworm, gram pod borer
+- Spodoptera NPV (SlNPV): 250 LE/ha for FAW, tobacco caterpillar
+- Apply at egg hatching; 5-7 day interval; do not mix with alkaline sprays
+
+## PESTICIDE SAFETY AND FIRST AID
+
+SAFETY PRECAUTIONS:
+- Always read the label before use
+- Wear PPE: gloves, goggles, mask, rubber boots, apron
+- Never spray during peak sunlight (10 AM – 4 PM in summer)
+- Do not eat, drink, or smoke while spraying
+- Wash hands thoroughly after handling pesticides
+- Keep children and livestock away from sprayed fields
+
+PRE-HARVEST INTERVAL (PHI): Observe waiting period before harvest:
+- Organophosphates: 14–21 days
+- Pyrethroids: 7–14 days
+- Neonicotinoids: 7–21 days
+- Triazoles (fungicides): 14–21 days
+
+FIRST AID FOR PESTICIDE POISONING:
+- Remove from exposure; remove contaminated clothing
+- Wash skin with soap and water; eyes with clean water (15 min)
+- If swallowed: Do NOT induce vomiting unless directed by doctor
+- Call Poison Control: 1800-11-6117 (India, toll-free)
+- Rush to nearest hospital; carry pesticide label

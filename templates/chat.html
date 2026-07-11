@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}AI Chat Advisor – AgriGenie{% endblock %}
+{% block page_title %}💬 AI Chat Advisor{% endblock %}
+
+{% block content %}
+<div style="height:calc(100vh - 100px);display:flex;flex-direction:column">
+
+  <!-- Chat Topic Bar -->
+  <div style="background:var(--ag-surface);border:1px solid var(--ag-border);border-radius:10px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+    <span style="font-size:.82rem;color:var(--ag-muted);font-weight:600">TOPIC:</span>
+    <select id="chatTopic" class="ag-input" style="width:auto;padding:4px 10px;font-size:.82rem">
+      <option value="general">🌾 General Farming</option>
+      <option value="crop">🌱 Crop Advice</option>
+      <option value="soil">🪨 Soil Health</option>
+      <option value="pest">🐛 Pest & Disease</option>
+      <option value="fertilizer">🧪 Fertilizer</option>
+      <option value="irrigation">💧 Irrigation</option>
+      <option value="weather">🌤 Weather</option>
+      <option value="market">📊 Market & Mandi</option>
+      <option value="schemes">🏛 Govt Schemes</option>
+    </select>
+    <div class="d-flex gap-2 flex-wrap ms-auto">
+      <button onclick="document.getElementById('chatMessages').innerHTML='';chatSessionId='sess_'+Date.now()"
+        class="btn btn-sm btn-outline-danger" style="border-radius:8px;font-size:.78rem">🗑 Clear Chat</button>
+      <a href="{{ url_for('chat_history') }}" class="btn btn-sm btn-outline-secondary" style="border-radius:8px;font-size:.78rem">📜 History</a>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div id="chatMessages" class="ag-chat-messages" style="flex:1;background:var(--ag-bg);border:1px solid var(--ag-border);border-radius:12px;overflow-y:auto">
+    <!-- Welcome message -->
+    <div class="ag-message assistant">
+      <div class="ag-message-avatar">🌾</div>
+      <div>
+        <div class="ag-message-bubble">
+          <strong>Jai Kisan! 🙏</strong><br>
+          I'm <strong>AgriGenie</strong>, your AI farming advisor powered by IBM watsonx.ai Granite.<br><br>
+          I can help you with:
+          <ul style="margin:8px 0;padding-left:18px">
+            <li>🌱 Crop selection and cultivation guidance</li>
+            <li>🪨 Soil health analysis and correction</li>
+            <li>🐛 Pest and disease identification + treatment</li>
+            <li>🧪 Fertilizer recommendations with doses</li>
+            <li>💧 Irrigation scheduling and water saving</li>
+            <li>📊 Mandi prices and market advice</li>
+            <li>🏛 Government schemes and eligibility</li>
+          </ul>
+          <em>Ask me anything about farming!</em>
+          {% if profile and profile.state %}
+          <br><br><small style="opacity:.7">Profile loaded: {{ profile.state }}, {{ profile.primary_crops or 'Mixed crops' }}</small>
+          {% endif %}
+        </div>
+        <div class="ag-message-time">Just now</div>
+      </div>
+    </div>
+
+    <!-- Pre-loaded history -->
+    {% if history %}
+      {% for msg in history[::-1] %}
+      <div class="ag-message {{ msg.role }}">
+        <div class="ag-message-avatar">{{ '👤' if msg.role == 'user' else '🌾' }}</div>
+        <div>
+          <div class="ag-message-bubble">
+            {{ msg.content | safe if msg.role == 'assistant' else msg.content }}
+          </div>
+          <div class="ag-message-time">{{ msg.timestamp.strftime('%d %b %H:%M') }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <!-- Quick Prompts -->
+  <div style="padding:8px 0;display:flex;gap:8px;overflow-x:auto;flex-wrap:wrap">
+    {% set prompts = [
+      ("🌱 Best crop for this season", "What is the best crop to grow in this Kharif season?"),
+      ("🪨 Soil pH correction", "My soil pH is 5.5, how do I correct it?"),
+      ("🐛 Yellow leaves on wheat", "Wheat leaves are turning yellow. What is the problem?"),
+      ("💧 Water-saving tips", "How can I save water in irrigation for my crops?"),
+      ("🏛 PM-KISAN eligibility", "Am I eligible for PM-KISAN scheme and how do I apply?"),
+      ("📊 Best time to sell wheat", "When should I sell my wheat for the best price?"),
+    ] %}
+    {% for label, prompt in prompts %}
+    <button onclick="sendQuickPrompt(`{{ prompt }}`)"
+      class="btn btn-outline-success btn-sm" style="border-radius:20px;white-space:nowrap;font-size:.78rem">
+      {{ label }}
+    </button>
+    {% endfor %}
+  </div>
+
+  <!-- Input Area -->
+  <div class="ag-chat-input-area" style="border-radius:12px;border:1px solid var(--ag-border)">
+    <div class="ag-chat-input-wrap">
+      <textarea id="chatInput" class="ag-chat-input"
+        placeholder="Type your farming question here… (Press Enter to send, Shift+Enter for new line)"
+        rows="1"></textarea>
+      <button id="chatSendBtn" class="ag-chat-send" onclick="sendChatMessage()" title="Send">
+        ➤
+      </button>
+    </div>
+    <div style="margin-top:6px;font-size:.72rem;color:var(--ag-muted)">
+      🤖 IBM watsonx.ai Granite · RAG Knowledge Base Active · Always consult local KVK for field decisions
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// Auto-scroll to bottom on load
+window.addEventListener("load", function() {
+  const msgs = document.getElementById("chatMessages");
+  if (msgs) msgs.scrollTop = msgs.scrollHeight;
+});
+</script>
+{% endblock %}

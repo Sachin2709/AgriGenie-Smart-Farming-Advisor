@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block title %}Soil Health – AgriGenie{% endblock %}
+{% block page_title %}🪨 Soil Health Analyzer{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <h2 class="ag-page-heading">🪨 Soil Health Analysis</h2>
+  <p class="ag-page-subheading">Enter your Soil Health Card values or lab test results for AI-powered soil correction advice.</p>
+</div>
+
+<div class="row g-4">
+  <div class="col-lg-5">
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">🧪 Soil Test Parameters</h6>
+        <span style="font-size:.75rem;color:var(--ag-muted)">From Soil Health Card / Lab</span>
+      </div>
+      <div class="ag-card-body">
+        <!-- pH Slider -->
+        <div class="ag-form-group">
+          <label class="ag-form-label">Soil pH: <strong id="phDisplay">7.0</strong></label>
+          <input type="range" id="soilPh" class="form-range" min="3.5" max="10" step="0.1" value="7.0"
+            oninput="document.getElementById('phDisplay').textContent=this.value;updatePhBar(this.value)">
+          <div style="margin-top:6px">
+            <div style="display:flex;justify-content:space-between;font-size:.7rem;color:var(--ag-muted)">
+              <span>Acidic</span><span>Neutral</span><span>Alkaline</span>
+            </div>
+            <div style="height:8px;border-radius:4px;background:linear-gradient(to right,#ef4444,#f59e0b,#22c55e,#22c55e,#f59e0b,#ef4444);position:relative;margin-top:2px">
+              <div id="phIndicator" style="position:absolute;top:-3px;width:14px;height:14px;background:#1b5e20;border:2px solid #fff;border-radius:50%;transform:translateX(-50%);transition:.2s;left:50%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="ag-form-label">Organic Carbon (%)</label>
+            <input type="number" id="soilOC" class="ag-input" step="0.1" min="0" max="5" value="0.5" placeholder="0.5">
+            <small style="color:var(--ag-muted);font-size:.72rem">Low &lt;0.5% | Medium 0.5–0.75% | High &gt;0.75%</small>
+          </div>
+          <div class="col-md-6">
+            <label class="ag-form-label">Soil Texture</label>
+            <select id="soilTexture" class="ag-input">
+              <option value="sandy">Sandy</option>
+              <option value="sandy loam">Sandy Loam</option>
+              <option value="loamy" selected>Loamy</option>
+              <option value="clay loam">Clay Loam</option>
+              <option value="clay">Clay / Black Cotton</option>
+              <option value="laterite">Laterite</option>
+            </select>
+          </div>
+          {% for nutrient, opts in [
+            ('Nitrogen (N)', ['Low', 'Medium', 'High']),
+            ('Phosphorus (P)', ['Low', 'Medium', 'High']),
+            ('Potassium (K)', ['Low', 'Medium', 'High']),
+            ('Zinc (Zn)', ['Deficient', 'Marginal', 'Sufficient']),
+            ('Sulfur (S)', ['Deficient', 'Marginal', 'Sufficient']),
+          ] %}
+          <div class="col-md-6">
+            <label class="ag-form-label">{{ nutrient }}</label>
+            <select id="soil{{ nutrient.split('(')[0].strip().replace(' ','') }}" class="ag-input">
+              {% for o in opts %}<option value="{{ o.lower() }}" {{ 'selected' if o == 'Medium' or o == 'Sufficient' }}>{{ o }}</option>{% endfor %}
+            </select>
+          </div>
+          {% endfor %}
+          <div class="col-12">
+            <label class="ag-form-label">Planned Crop</label>
+            <input type="text" id="soilCrop" class="ag-input"
+              value="{{ profile.primary_crops.split(',')[0].strip() if profile and profile.primary_crops else '' }}"
+              placeholder="e.g. Wheat, Rice, Cotton, Tomato">
+          </div>
+        </div>
+        <button class="btn-ag w-100 mt-4" onclick="analyzeSoil()">
+          🪨 Analyze Soil & Get Advice
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-7">
+    <div class="ag-card mb-4">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📊 Soil Health Snapshot</h6>
+      </div>
+      <div class="ag-card-body">
+        <div class="row g-3">
+          {% set params = [
+            ('pH', '7.0', '#22c55e', 'Neutral'),
+            ('Organic C', '0.5%', '#f59e0b', 'Low'),
+            ('Nitrogen', 'Medium', '#3b82f6', 'Adequate'),
+            ('Phosphorus', 'Medium', '#8b5cf6', 'Adequate'),
+            ('Potassium', 'Medium', '#ec4899', 'Adequate'),
+            ('Zinc', 'Sufficient', '#22c55e', 'Good'),
+          ] %}
+          {% for name, val, color, status in params %}
+          <div class="col-6 col-md-4">
+            <div style="background:var(--ag-bg);border-radius:10px;padding:14px;text-align:center">
+              <div style="font-size:.72rem;color:var(--ag-muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">{{ name }}</div>
+              <div style="font-size:1.3rem;font-weight:800;color:{{ color }}">{{ val }}</div>
+              <div style="font-size:.72rem;color:{{ color }};margin-top:2px">{{ status }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">🤖 AI Soil Analysis</h6>
+        <span style="font-size:.75rem;color:var(--ag-muted)">IBM watsonx.ai + RAG</span>
+      </div>
+      <div class="ag-card-body">
+        <div id="soilResult">
+          <div class="text-center py-5" style="color:var(--ag-muted)">
+            <div style="font-size:4rem;margin-bottom:12px">🪨</div>
+            <p>Enter soil test values and click<br><strong>Analyze Soil</strong> for AI advice.</p>
+            <p style="font-size:.82rem">Get amendment recommendations,<br>fertilizer doses, and improvement plan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Previous Analyses -->
+{% if analyses %}
+<div class="ag-card mt-4">
+  <div class="ag-card-header">
+    <h6 class="ag-card-title">📜 Previous Soil Analyses</h6>
+  </div>
+  <div class="ag-card-body p-0">
+    <table class="ag-price-table">
+      <thead><tr><th>Date</th><th>pH</th><th>OC%</th><th>N</th><th>P</th><th>K</th><th>Crop</th></tr></thead>
+      <tbody>
+        {% for a in analyses %}
+        <tr>
+          <td>{{ a.created_at.strftime('%d %b %Y') }}</td>
+          <td>{{ a.ph_value }}</td>
+          <td>{{ a.organic_carbon }}</td>
+          <td><span class="ag-badge badge-{{ 'up' if a.nitrogen=='high' else ('down' if a.nitrogen=='low' else 'stable') }}">{{ a.nitrogen }}</span></td>
+          <td><span class="ag-badge badge-{{ 'up' if a.phosphorus=='high' else ('down' if a.phosphorus=='low' else 'stable') }}">{{ a.phosphorus }}</span></td>
+          <td><span class="ag-badge badge-{{ 'up' if a.potassium=='high' else ('down' if a.potassium=='low' else 'stable') }}">{{ a.potassium }}</span></td>
+          <td>{{ a.texture or '—' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+<script>
+function updatePhBar(val) {
+  const pct = ((parseFloat(val) - 3.5) / (10 - 3.5)) * 100;
+  document.getElementById("phIndicator").style.left = pct + "%";
+}
+
+async function analyzeSoil() {
+  await queryAI("/api/soil-analysis", {
+    ph:             parseFloat(document.getElementById("soilPh").value),
+    organic_carbon: parseFloat(document.getElementById("soilOC").value),
+    nitrogen:       document.getElementById("soilNitrogen").value,
+    phosphorus:     document.getElementById("soilPhosphorus").value,
+    potassium:      document.getElementById("soilPotassium").value,
+    zinc:           document.getElementById("soilZinc").value,
+    sulfur:         document.getElementById("soilSulfur").value,
+    texture:        document.getElementById("soilTexture").value,
+    crop:           document.getElementById("soilCrop").value,
+  }, "soilResult", "🪨 Analyzing soil parameters…");
+}
+</script>
+{% endblock %}

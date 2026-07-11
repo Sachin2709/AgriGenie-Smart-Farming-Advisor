@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block title %}Fertilizer Advisor – AgriGenie{% endblock %}
+{% block page_title %}🧪 Fertilizer Advisor{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <h2 class="ag-page-heading">🧪 Fertilizer Recommendation</h2>
+  <p class="ag-page-subheading">Get precise fertilizer schedules with doses, timing, and organic alternatives.</p>
+</div>
+
+<div class="row g-4">
+  <div class="col-lg-5">
+    <div class="ag-card">
+      <div class="ag-card-header"><h6 class="ag-card-title">📋 Crop & Soil Details</h6></div>
+      <div class="ag-card-body">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="ag-form-label">Crop Name</label>
+            <input type="text" id="fertCrop" class="ag-input"
+              value="{{ profile.primary_crops.split(',')[0].strip() if profile and profile.primary_crops else '' }}"
+              placeholder="e.g. Wheat, Rice, Tomato, Cotton">
+          </div>
+          <div class="col-md-6">
+            <label class="ag-form-label">Area (Acres)</label>
+            <input type="number" id="fertArea" class="ag-input" step="0.5" min="0.5"
+              value="{{ profile.land_size or 1 }}" placeholder="e.g. 2">
+          </div>
+          <div class="col-md-6">
+            <label class="ag-form-label">Growth Stage</label>
+            <select id="fertStage" class="ag-input">
+              <option value="pre-sowing">Pre-Sowing / Land Prep</option>
+              <option value="sowing" selected>Sowing / Basal Dose</option>
+              <option value="germination">Germination (0–15 DAS)</option>
+              <option value="vegetative">Vegetative (15–45 DAS)</option>
+              <option value="flowering">Flowering / Bud Stage</option>
+              <option value="fruiting">Fruiting / Pod Filling</option>
+              <option value="maturity">Near Maturity</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="ag-form-label">Soil pH</label>
+            <input type="number" id="fertPh" class="ag-input" step="0.1" min="4" max="10"
+              value="7.0" placeholder="7.0">
+          </div>
+          <div class="col-md-6">
+            <label class="ag-form-label">Organic Carbon (%)</label>
+            <input type="number" id="fertOC" class="ag-input" step="0.1" min="0" max="5"
+              value="0.5" placeholder="0.5">
+          </div>
+          <div class="col-md-6">
+            <label class="ag-form-label">Irrigation Type</label>
+            <select id="fertIrrig" class="ag-input">
+              <option value="rainfed">Rainfed</option>
+              <option value="irrigated" selected>Irrigated (Flood)</option>
+              <option value="drip">Drip Irrigation</option>
+              <option value="sprinkler">Sprinkler</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="ag-form-label">Preference</label>
+            <select id="fertOrganic" class="ag-input">
+              <option value="false">Chemical Fertilizers</option>
+              <option value="true">Organic / Natural</option>
+              <option value="both">Integrated (INM)</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-ag w-100 mt-4" onclick="getFertRecommendation()">
+          🧪 Get Fertilizer Schedule
+        </button>
+      </div>
+    </div>
+
+    <!-- NPK Quick Reference -->
+    <div class="ag-card mt-4">
+      <div class="ag-card-header"><h6 class="ag-card-title">📊 Common NPK Doses</h6></div>
+      <div class="ag-card-body p-0">
+        <table class="ag-price-table" style="font-size:.8rem">
+          <thead><tr><th>Crop</th><th>N</th><th>P₂O₅</th><th>K₂O</th></tr></thead>
+          <tbody>
+            {% for row in [
+              ('Wheat (irrigated)', 120, 60, 40),
+              ('Rice (HYV)', 120, 50, 40),
+              ('Maize (hybrid)', 150, 60, 60),
+              ('Cotton (Bt)', 100, 50, 50),
+              ('Soybean', 20, 80, 40),
+              ('Mustard', 80, 40, 20),
+            ] %}
+            <tr>
+              <td>{{ row[0] }}</td>
+              <td>{{ row[1] }}</td>
+              <td>{{ row[2] }}</td>
+              <td>{{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <p style="font-size:.72rem;color:var(--ag-muted);padding:8px 14px">Doses in kg/ha. Adjust based on soil test.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-7">
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">🤖 AI Fertilizer Schedule</h6>
+        <span style="font-size:.75rem;color:var(--ag-muted)">IBM watsonx.ai + RAG</span>
+      </div>
+      <div class="ag-card-body">
+        <div id="fertResult">
+          <div class="text-center py-5" style="color:var(--ag-muted)">
+            <div style="font-size:4rem;margin-bottom:12px">🧪</div>
+            <p>Enter crop details and click <strong>Get Fertilizer Schedule</strong><br>for precise doses, timing, and cost estimates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+async function getFertRecommendation() {
+  await queryAI("/api/fertilizer-recommendation", {
+    crop:            document.getElementById("fertCrop").value,
+    area:            parseFloat(document.getElementById("fertArea").value),
+    growth_stage:    document.getElementById("fertStage").value,
+    soil_ph:         parseFloat(document.getElementById("fertPh").value),
+    organic_carbon:  parseFloat(document.getElementById("fertOC").value),
+    irrigation:      document.getElementById("fertIrrig").value,
+    prefer_organic:  document.getElementById("fertOrganic").value === "true",
+  }, "fertResult", "🧪 Calculating optimal fertilizer schedule…");
+}
+</script>
+{% endblock %}

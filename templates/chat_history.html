@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Chat History – AgriGenie{% endblock %}
+{% block page_title %}📜 Chat History{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+    <div>
+      <h2 class="ag-page-heading">📜 Chat History</h2>
+      <p class="ag-page-subheading">Your past conversations with AgriGenie AI.</p>
+    </div>
+    <div class="d-flex gap-2">
+      <a href="{{ url_for('chat_page') }}" class="btn-ag">💬 New Chat</a>
+      <button class="btn-ag-outline" onclick="clearAllChats()">🗑 Clear All</button>
+    </div>
+  </div>
+</div>
+
+<!-- Topic Filter -->
+<div class="ag-card mb-4">
+  <div class="ag-card-body py-3">
+    <div class="d-flex gap-2 flex-wrap align-items-center">
+      <span style="font-size:.82rem;color:var(--ag-muted);font-weight:600">FILTER:</span>
+      {% for topic in ['', 'general', 'crop', 'soil', 'pest', 'fertilizer', 'irrigation', 'weather', 'market', 'schemes'] %}
+      <a href="?topic={{ topic }}"
+        class="btn btn-sm {{ 'btn-success' if topic_filter == topic else 'btn-outline-secondary' }}"
+        style="border-radius:20px;font-size:.78rem">
+        {% if topic == '' %}All
+        {% elif topic == 'general' %}🌾 General
+        {% elif topic == 'crop' %}🌱 Crop
+        {% elif topic == 'soil' %}🪨 Soil
+        {% elif topic == 'pest' %}🐛 Pest
+        {% elif topic == 'fertilizer' %}🧪 Fertilizer
+        {% elif topic == 'irrigation' %}💧 Irrigation
+        {% elif topic == 'weather' %}🌤 Weather
+        {% elif topic == 'market' %}📊 Market
+        {% else %}🏛 Schemes
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% if messages.items %}
+<div class="ag-card">
+  <div class="ag-card-body p-0">
+    <div id="chatHistoryList">
+      {% for msg in messages.items %}
+      <div class="chat-history-item" id="histItem{{ msg.id }}"
+        style="padding:16px 20px;border-bottom:1px solid var(--ag-border);display:flex;gap:16px;transition:background .15s"
+        onmouseover="this.style.background='var(--ag-bg)'" onmouseout="this.style.background='transparent'">
+        <!-- Icon -->
+        <div style="flex-shrink:0;margin-top:2px">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(34,134,58,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem">
+            {% if msg.topic == 'crop' %}🌱
+            {% elif msg.topic == 'soil' %}🪨
+            {% elif msg.topic == 'pest' %}🐛
+            {% elif msg.topic == 'fertilizer' %}🧪
+            {% elif msg.topic == 'irrigation' %}💧
+            {% elif msg.topic == 'weather' %}🌤
+            {% elif msg.topic == 'market' %}📊
+            {% elif msg.topic == 'schemes' %}🏛
+            {% else %}💬{% endif %}
+          </div>
+        </div>
+        <!-- Content -->
+        <div style="flex:1;min-width:0">
+          <div style="font-size:.9rem;color:var(--ag-text);margin-bottom:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+            <strong>Q:</strong> {{ msg.content }}
+          </div>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            {% if msg.topic %}
+            <span class="ag-badge badge-stable">{{ msg.topic }}</span>
+            {% endif %}
+            <span style="font-size:.75rem;color:var(--ag-muted)">{{ msg.timestamp.strftime('%d %b %Y, %I:%M %p') }}</span>
+            {% if msg.model_used %}
+            <span style="font-size:.72rem;color:var(--ag-muted)">• {{ msg.model_used }}</span>
+            {% endif %}
+          </div>
+        </div>
+        <!-- Actions -->
+        <div style="flex-shrink:0;display:flex;gap:6px;align-items:center">
+          <button onclick="sendQuickPromptFromHistory('{{ msg.content | replace("'", "\\'") }}')"
+            class="btn btn-sm btn-outline-success" style="border-radius:6px;font-size:.75rem">↩ Re-ask</button>
+          <button onclick="deleteChatItem({{ msg.id }})"
+            class="btn btn-sm btn-outline-danger" style="border-radius:6px;font-size:.75rem">🗑</button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Pagination -->
+{% if messages.pages > 1 %}
+<div class="d-flex justify-content-center gap-2 mt-4">
+  {% if messages.has_prev %}
+  <a href="?page={{ messages.prev_num }}{% if topic_filter %}&topic={{ topic_filter }}{% endif %}"
+    class="btn-ag-outline">← Previous</a>
+  {% endif %}
+  <span style="padding:8px 16px;background:var(--ag-surface);border:1px solid var(--ag-border);border-radius:8px;font-size:.88rem;color:var(--ag-muted)">
+    Page {{ messages.page }} of {{ messages.pages }}
+  </span>
+  {% if messages.has_next %}
+  <a href="?page={{ messages.next_num }}{% if topic_filter %}&topic={{ topic_filter }}{% endif %}"
+    class="btn-ag">Next →</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% else %}
+<div class="ag-card">
+  <div class="ag-card-body text-center py-5" style="color:var(--ag-muted)">
+    <div style="font-size:4rem;margin-bottom:16px">📭</div>
+    <h5>No chat history yet</h5>
+    <p>Start chatting with AgriGenie AI to see your history here.</p>
+    <a href="{{ url_for('chat_page') }}" class="btn-ag mt-2">💬 Start Chatting</a>
+  </div>
+</div>
+{% endif %}
+
+<script>
+async function deleteChatItem(id) {
+  if (!confirm("Delete this chat entry?")) return;
+  try {
+    const r = await fetch(`/api/chat-history/${id}`, {
+      method: "DELETE",
+      headers: { "X-CSRFToken": getCsrfToken() }
+    });
+    if (r.ok) {
+      document.getElementById(`histItem${id}`)?.remove();
+      showToast("Deleted", "success");
+    }
+  } catch(e) {
+    showToast("Failed to delete", "error");
+  }
+}
+
+async function clearAllChats() {
+  if (!confirm("Clear all chat history? This cannot be undone.")) return;
+  try {
+    const r = await fetch("/api/chat-history/clear", {
+      method: "DELETE",
+      headers: { "X-CSRFToken": getCsrfToken() }
+    });
+    if (r.ok) {
+      document.getElementById("chatHistoryList").innerHTML = "";
+      showToast("Chat history cleared", "success");
+      setTimeout(() => location.reload(), 1000);
+    }
+  } catch(e) {
+    showToast("Failed to clear", "error");
+  }
+}
+
+function sendQuickPromptFromHistory(text) {
+  window.location.href = "/chat";
+  sessionStorage.setItem("quickPrompt", text);
+}
+</script>
+{% endblock %}

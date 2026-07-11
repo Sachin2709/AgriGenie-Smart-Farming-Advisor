@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}My Profile – AgriGenie{% endblock %}
+{% block page_title %}👤 My Profile{% endblock %}
+
+{% block content %}
+<div class="ag-page-header">
+  <h2 class="ag-page-heading">👤 Farmer Profile</h2>
+  <p class="ag-page-subheading">Complete your profile to get personalized farming advice tailored to your location and crops.</p>
+</div>
+
+<div class="row g-4">
+  <!-- Profile Form -->
+  <div class="col-lg-8">
+    <div class="ag-card">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📋 Personal & Farm Information</h6>
+        <div id="saveStatus" style="font-size:.82rem;color:var(--ag-muted)"></div>
+      </div>
+      <div class="ag-card-body">
+        <form id="profileForm">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="ag-form-label">Full Name</label>
+              <input type="text" name="name" class="ag-input" value="{{ profile.name or '' }}" placeholder="Your name">
+            </div>
+            <div class="col-md-6">
+              <label class="ag-form-label">Mobile Number</label>
+              <input type="tel" name="phone" class="ag-input" value="{{ profile.phone or '' }}" placeholder="+91 98765 43210">
+            </div>
+            <div class="col-md-4">
+              <label class="ag-form-label">State</label>
+              <select name="state" class="ag-input">
+                <option value="">Select State</option>
+                {% for s in ['Andhra Pradesh','Assam','Bihar','Chhattisgarh','Gujarat','Haryana',
+                             'Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh',
+                             'Maharashtra','Manipur','Meghalaya','Odisha','Punjab','Rajasthan',
+                             'Tamil Nadu','Telangana','Uttar Pradesh','Uttarakhand','West Bengal',
+                             'Jammu & Kashmir','Delhi'] %}
+                <option value="{{ s }}" {{ 'selected' if profile and profile.state == s }}>{{ s }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="ag-form-label">District</label>
+              <input type="text" name="district" class="ag-input" value="{{ profile.district or '' }}" placeholder="Your district">
+            </div>
+            <div class="col-md-4">
+              <label class="ag-form-label">Village / Town</label>
+              <input type="text" name="village" class="ag-input" value="{{ profile.village or '' }}" placeholder="Village name">
+            </div>
+            <div class="col-md-4">
+              <label class="ag-form-label">Land Size (Acres)</label>
+              <input type="number" name="land_size" class="ag-input" step="0.1" min="0"
+                value="{{ profile.land_size or 0 }}" placeholder="e.g. 5.5">
+            </div>
+            <div class="col-md-4">
+              <label class="ag-form-label">Soil Type</label>
+              <select name="soil_type" class="ag-input">
+                <option value="">Select Soil</option>
+                {% for s in ['Alluvial (Domat)', 'Black Cotton (Regur)', 'Red & Yellow',
+                             'Laterite', 'Sandy', 'Clay', 'Loamy', 'Sandy Loam',
+                             'Clay Loam', 'Saline-Alkaline (Usar)', 'Acidic (Forest)'] %}
+                <option value="{{ s }}" {{ 'selected' if profile and profile.soil_type == s }}>{{ s }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="ag-form-label">Irrigation Type</label>
+              <select name="irrigation_type" class="ag-input">
+                <option value="">Select Method</option>
+                {% for m in ['Rainfed', 'Canal Irrigation', 'Borewell/Tubewell', 'Drip Irrigation',
+                             'Sprinkler Irrigation', 'Tank/Pond', 'Lift Irrigation', 'River Diversion'] %}
+                <option value="{{ m }}" {{ 'selected' if profile and profile.irrigation_type == m }}>{{ m }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="ag-form-label">Primary Crops</label>
+              <input type="text" name="primary_crops" class="ag-input"
+                value="{{ profile.primary_crops or '' }}"
+                placeholder="e.g. Wheat, Rice, Soybean">
+            </div>
+            <div class="col-md-3">
+              <label class="ag-form-label">Experience (Years)</label>
+              <input type="number" name="experience" class="ag-input" min="0" max="80"
+                value="{{ profile.experience or 0 }}" placeholder="Years farming">
+            </div>
+            <div class="col-md-3">
+              <label class="ag-form-label">Preferred Language</label>
+              <select name="preferred_lang" class="ag-input">
+                {% for l in ['English','Hindi','Marathi','Gujarati','Punjabi','Bengali',
+                             'Telugu','Kannada','Tamil','Odia','Malayalam','Assamese'] %}
+                <option value="{{ l }}" {{ 'selected' if profile and profile.preferred_lang == l }}>{{ l }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="mt-4 d-flex gap-3">
+            <button type="submit" class="btn-ag">💾 Save Profile</button>
+            <a href="{{ url_for('dashboard') }}" class="btn-ag-outline">← Dashboard</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Summary Card -->
+  <div class="col-lg-4">
+    <div class="ag-card">
+      <div class="ag-card-body text-center">
+        <div class="ag-avatar mx-auto mb-3" style="width:72px;height:72px;font-size:1.8rem">
+          {{ user.username[0].upper() }}
+        </div>
+        <h5 style="font-weight:700">{{ profile.name or user.username }}</h5>
+        <p style="color:var(--ag-muted);font-size:.88rem">{{ user.email }}</p>
+        <hr>
+        <div class="text-start">
+          {% macro info_row(icon, label, value) %}
+          <div style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--ag-border)">
+            <span>{{ icon }}</span>
+            <div>
+              <div style="font-size:.72rem;color:var(--ag-muted);text-transform:uppercase;letter-spacing:.4px">{{ label }}</div>
+              <div style="font-size:.88rem;font-weight:600">{{ value or '—' }}</div>
+            </div>
+          </div>
+          {% endmacro %}
+          {{ info_row('📍', 'Location', (profile.district or '') + ', ' + (profile.state or '')) }}
+          {{ info_row('🌾', 'Land', (profile.land_size or 0)|string + ' Acres') }}
+          {{ info_row('🪨', 'Soil Type', profile.soil_type) }}
+          {{ info_row('💧', 'Irrigation', profile.irrigation_type) }}
+          {{ info_row('🌱', 'Crops', profile.primary_crops) }}
+          {{ info_row('📅', 'Experience', (profile.experience or 0)|string + ' Years') }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Account Actions -->
+    <div class="ag-card mt-3">
+      <div class="ag-card-body">
+        <h6 style="font-weight:700;margin-bottom:12px">⚙️ Account</h6>
+        <div class="d-grid gap-2">
+          <a href="{{ url_for('chat_history') }}" class="btn btn-outline-secondary btn-sm" style="border-radius:8px">📜 Chat History</a>
+          <a href="{{ url_for('logout') }}" class="btn btn-outline-danger btn-sm" style="border-radius:8px">⏻ Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById("profileForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const btn  = this.querySelector("button[type=submit]");
+  const orig = btn.innerHTML;
+  btn.innerHTML = "⏳ Saving…";
+  btn.disabled  = true;
+  const fd   = new FormData(this);
+  const data = Object.fromEntries(fd.entries());
+  try {
+    const r = await fetch("/profile", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-CSRFToken": data.csrf_token },
+      body: JSON.stringify(data)
+    });
+    const d = await r.json();
+    if (d.success) {
+      showToast(d.message, "success");
+      document.getElementById("saveStatus").textContent = "✅ Saved " + new Date().toLocaleTimeString();
+    } else {
+      showToast("Save failed", "error");
+    }
+  } catch(err) {
+    showToast("Network error", "error");
+  } finally {
+    btn.innerHTML = orig;
+    btn.disabled  = false;
+  }
+});
+</script>
+{% endblock %}

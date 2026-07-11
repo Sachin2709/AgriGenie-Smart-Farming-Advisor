@@ -1,0 +1,136 @@
+COMPREHENSIVE CROP GROWING GUIDES FOR INDIAN AGRICULTURE
+=========================================================
+
+## WHEAT (Triticum aestivum)
+Wheat is the second most important food grain crop in India after rice.
+
+SUITABLE REGIONS: Punjab, Haryana, Uttar Pradesh, Madhya Pradesh, Rajasthan, Bihar
+CLIMATE: Cool and moist during growth; warm and dry at maturity. Temperature: 10–25°C
+SOIL: Well-drained loamy or clay-loam soil with pH 6.0–7.5
+SOWING TIME: Rabi season – October to December (best: November 1–15 for North India)
+SEED RATE: 100–125 kg/ha for timely sown; 125–150 kg/ha for late sown
+WATER REQUIREMENT: 400–500 mm. 4–6 irrigations recommended.
+CRITICAL IRRIGATION STAGES: Crown root initiation (CRI – 20–25 DAS), tillering (40–45 DAS), jointing (65–70 DAS), flowering (90–95 DAS), dough stage (105–110 DAS)
+VARIETIES: HD-2967, HD-3086, PBW-343, GW-322, Raj-4120, K-307, HI-8498 (durum)
+YIELD POTENTIAL: 4–6 tonnes/ha under good management
+HARVEST: When grain moisture is 12–14%, straw turns yellow (April–May)
+MAJOR PESTS: Aphids, termites, pink stem borer
+MAJOR DISEASES: Rust (leaf/stem/stripe), Karnal bunt, loose smut, powdery mildew
+
+## RICE/PADDY (Oryza sativa)
+Rice is the most important food crop and is grown in over 44 million hectares in India.
+
+SUITABLE REGIONS: West Bengal, UP, Punjab, Odisha, Andhra Pradesh, Telangana, Chhattisgarh
+CLIMATE: Hot and humid; temperature 25–35°C; 24-hour temperature not below 20°C
+SOIL: Clay and clay-loam soils; pH 5.0–7.0; good water retention
+SOWING TIME: Kharif – June–July (transplanting June–August); some areas Rabi crop also
+NURSERY: 25–30 kg seed/ha; transplant 25–30 days old seedlings; 2–3 seedlings/hill
+SPACING: 20×15 cm for medium duration; 25×20 cm for long duration varieties
+WATER REQUIREMENT: 1200–2000 mm; maintain 5 cm standing water during vegetative stage
+VARIETIES: Swarna, MTU-7029, Pusa Basmati 1121, IR-64, Jaya, Sarjoo-52, BPT-5204
+YIELD POTENTIAL: 5–8 tonnes/ha for HYV; 3–4 t/ha for traditional
+MAJOR PESTS: Brown plant hopper, stem borer, leaf folder, gall midge
+MAJOR DISEASES: Blast, bacterial blight, sheath blight, tungro virus
+
+## MAIZE/CORN (Zea mays)
+Maize is the third most important cereal crop in India.
+
+SUITABLE REGIONS: Karnataka, Andhra Pradesh, Rajasthan, MP, UP, Bihar, Himachal Pradesh
+CLIMATE: Warm weather; optimum temperature 21–27°C; frost-sensitive
+SOIL: Well-drained loamy soil; pH 5.8–7.0; poor waterlogging tolerance
+SOWING TIME: Kharif – June–July; Rabi – October–November in peninsular India
+SEED RATE: 20–25 kg/ha (single cross hybrids); 18–20 kg/ha (double cross)
+SPACING: 60×20 cm or 75×25 cm
+WATER REQUIREMENT: 500–600 mm; critical at silking and grain filling stages
+VARIETIES: DHM-117, HQPM-1, Vivek-9, Pioneer 3396, NK-6240
+YIELD POTENTIAL: 6–10 tonnes/ha for hybrids
+MAJOR PESTS: Fall army worm (FAW), stem borer, aphids
+MAJOR DISEASES: Maydis leaf blight, turcicum blight, common rust
+
+## COTTON (Gossypium hirsutum / G. arboreum)
+India is one of the largest producers of cotton in the world.
+
+SUITABLE REGIONS: Gujarat, Maharashtra, Telangana, Andhra Pradesh, Punjab, Haryana
+CLIMATE: Warm 21–30°C; requires 6–8 months frost-free period; rainfall 500–1000 mm
+SOIL: Black cotton soil (vertisols), deep loamy soils; pH 6.0–8.0
+SOWING TIME: Kharif – April–June depending on region
+SEED RATE: 2.5–3 kg/ha (Bt cotton); 20–25 kg/ha (desi cotton)
+SPACING: 90×60 cm (Bt) or 45×30 cm (desi)
+VARIETIES: Bt hybrids – Bollgard II widely used; Desi – Suvin, DCH-32
+YIELD POTENTIAL: 20–25 quintals seed cotton/ha for Bt hybrids
+MAJOR PESTS: Pink bollworm, american bollworm, whitefly (Bemisia tabaci), mealybug, thrips
+MAJOR DISEASES: Bacterial blight, Fusarium wilt, Verticillium wilt, alternaria blight
+
+## SUGARCANE (Saccharum officinarum)
+India is the world's largest consumer and second-largest producer of sugarcane.
+
+SUITABLE REGIONS: UP, Maharashtra, Karnataka, Tamil Nadu, Andhra Pradesh, Bihar
+CLIMATE: Tropical and subtropical; temperature 20–35°C; high humidity
+SOIL: Deep, well-drained loamy soils; pH 6.0–7.5
+PLANTING TIME: October–November (autumn), February–March (spring)
+SEED RATE: 8–10 tonnes setts (2–3 budded)/ha; 37,500–40,000 setts/ha
+RATOON MANAGEMENT: 2–3 ratoon crops possible; gap filling important
+WATER REQUIREMENT: 1500–2500 mm; flood irrigation or drip irrigation
+VARIETIES: Co-86032, CoC-671, Co-419, CoJ-64, CoSe-98231
+YIELD POTENTIAL: 80–100 tonnes/ha of cane
+HARVEST: 10–14 months; Brix 18–22%
+MAJOR PESTS: Early shoot borer, internode borer, mealy bug, white fly
+MAJOR DISEASES: Red rot, grassy shoot, ratoon stunting disease, wilt
+
+## SOYBEAN (Glycine max)
+Soybean is the most important oilseed crop in India.
+
+SUITABLE REGIONS: Madhya Pradesh, Maharashtra, Rajasthan, Karnataka
+CLIMATE: Warm humid; temperature 20–30°C; day-length sensitive (short-day plant)
+SOIL: Well-drained loamy soil; pH 6.0–7.5; does not tolerate waterlogging
+SOWING TIME: Kharif – June–July after onset of monsoon
+SEED RATE: 75–80 kg/ha; seed treatment with Rhizobium and PSB culture
+SPACING: 45×5 cm or 30×10 cm
+VARIETIES: JS-335, JS-9305, NRC-37, MACS-450, Durga (JS-20-69)
+YIELD POTENTIAL: 2–3 tonnes/ha
+RHIZOBIUM INOCULATION: Essential for N fixation – can fix 60–80 kg N/ha
+MAJOR PESTS: Girdle beetle, stem fly, whitefly, pod borer
+MAJOR DISEASES: Yellow mosaic virus, root rot, bacterial pustule, rust
+
+## GROUNDNUT (Arachis hypogaea)
+Groundnut is India's most important oilseed crop by area.
+
+SUITABLE REGIONS: Gujarat, Rajasthan, AP, Tamil Nadu, Karnataka, MP
+CLIMATE: Warm 25–30°C; rainfall 500–1250 mm; requires dry weather at pod maturity
+SOIL: Light sandy loam to loamy soils; pH 6.0–7.0; good calcium availability
+SOWING TIME: Kharif – June–July; Rabi/Summer – November–January
+SEED RATE: 100–120 kg/ha (bold seeded); 80–100 kg/ha (small seeded)
+SPACING: 30×10 cm or 45×10 cm
+VARIETIES: TAG-24, GG-20, TG-37A, JL-24, TMV-2, Dharani
+YIELD POTENTIAL: 2–4 tonnes pods/ha
+MAJOR PESTS: Leaf miner, thrips, jassids, red hairy caterpillar
+MAJOR DISEASES: Early leaf spot, late leaf spot, rust, tikka disease, Aspergillus crown rot
+
+## TOMATO (Solanum lycopersicum)
+Tomato is the most widely grown vegetable crop in India.
+
+SUITABLE REGIONS: Karnataka, Andhra Pradesh, Maharashtra, Odisha, UP
+CLIMATE: Warm 20–27°C day; night temperature above 10°C required for setting
+SOIL: Well-drained sandy loam to clay loam; pH 6.0–7.0
+SOWING TIME: Year-round with season varieties; main: June–July and November–December
+SEED RATE: 150–200 g/ha; nursery transplanting at 25–30 days
+SPACING: 75×60 cm or 60×45 cm
+VARIETIES: Hybrid – Pusa Hybrid-4, Arka Rakshak; Open pollinated – Pusa Ruby, CO-3
+YIELD POTENTIAL: 40–60 tonnes/ha for hybrids
+MAJOR PESTS: Tomato fruit borer (Helicoverpa), whitefly, leafminer, mites
+MAJOR DISEASES: Early blight, late blight (Phytophthora), bacterial wilt, TLCV (leaf curl virus)
+
+## POTATO (Solanum tuberosum)
+India is the third largest producer of potato in the world.
+
+SUITABLE REGIONS: UP, West Bengal, Bihar, Gujarat, Punjab, MP
+CLIMATE: Cool 15–20°C; cannot tolerate frost; altitude 1000–3000 m for hill areas
+SOIL: Loose, friable loamy soil; pH 5.2–6.4; good drainage essential
+PLANTING TIME: Rabi – October–November; Kharif (hills) – April–May
+SEED RATE: 2.0–2.5 tonnes/ha of certified seed tubers
+SPACING: 60×20 cm or 50×20 cm
+VARIETIES: Kufri Jyoti, Kufri Bahar, Kufri Sinduri, Kufri Chipsona, Kufri Pukhraj
+YIELD POTENTIAL: 25–35 tonnes/ha
+STORAGE: Requires cold storage at 2–4°C for long-term; farm storage at 10–12°C
+MAJOR PESTS: Potato tuber moth, aphids, cutworms
+MAJOR DISEASES: Late blight (most serious), early blight, black scurf, wart disease

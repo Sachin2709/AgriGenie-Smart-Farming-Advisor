@@ -1,0 +1,235 @@
+WEATHER ADVISORIES AND CLIMATE-SMART AGRICULTURE
+=================================================
+
+## INDIAN MONSOON AND AGRICULTURE
+
+SOUTHWEST MONSOON (Kharif Season):
+- Onset: Kerala around June 1; covers entire India by mid-July
+- Withdrawal: Northwest Rajasthan around September 1; complete by November 1
+- Normal rainfall: 890 mm (June–September)
+- Distribution: Northeast India > 3000 mm; Rajasthan < 200 mm
+- Impact: 60% of Indian agriculture depends on monsoon
+
+NORTHEAST MONSOON (October–December):
+- Affects: Tamil Nadu, AP, Karnataka coastal, Pondicherry
+- Provides Rabi season moisture for these areas
+
+## AGROMETEOROLOGICAL ADVISORIES BY SEASON
+
+### KHARIF SEASON ADVISORIES
+
+PRE-MONSOON (April–May):
+- Complete land preparation, ploughing, and field leveling before monsoon
+- Repair field bunds, drainage channels, irrigation structures
+- Arrange seeds, fertilizers, pesticides for timely availability
+- Deep summer ploughing (destroys overwintering pests/diseases)
+- Sow seeds immediately after onset of monsoon (1st week of June in South; 2nd week of July in North)
+
+ONSET OF MONSOON (June):
+- Sow kharif crops within 2 weeks of reliable monsoon onset
+- Use moisture conservation techniques (ridges, furrows for dryland crops)
+- Apply basal dose of fertilizers at sowing
+- Watch for outbreaks of cut worms, cutworms, termites (soil pests active)
+
+ACTIVE MONSOON (July–August):
+- Monitor crop growth stages; watch for pest-disease outbreaks
+- Ensure proper drainage to prevent waterlogging
+- Avoid spraying during rain; spray in dry windows
+- Interculture operations during sunny periods
+- Top dress nitrogen fertilizer after rain ceases
+
+LATE MONSOON/WITHDRAWAL (September–October):
+- Start harvest of early kharif crops (moong, blackgram)
+- Prepare for post-monsoon/rabi land preparation
+- Harvest crops before unseasonal rain damages mature crops
+- Store harvested produce in dry conditions immediately
+
+### RABI SEASON ADVISORIES
+
+PRE-RABI (September–October):
+- Test soil moisture before sowing wheat/gram
+- Gather seeds, fertilizers, and prepare irrigation schedules
+- Prepare seedbeds while residual monsoon moisture is available
+- Sow rabi crops in optimal window (see crop-wise schedule)
+
+OPTIMAL SOWING WINDOW (Critical for Yield):
+- Wheat (North India): November 1–25 (best); avoid sowing after December 15
+- Gram: October 15 – November 15
+- Mustard: September 25 – October 15
+- Potato: October 10 – November 10
+
+WINTER (November–February):
+- Monitor wheat for frost damage at flowering stage
+- Cold waves (temperature < 5°C): Cover nurseries with straw/poly cover
+- Foggy weather: Reduces evapotranspiration; skip irrigation
+- Dew formation: Promotes fungal diseases; watch for rust, powdery mildew
+
+SPRING (February–March):
+- Rising temperatures; accelerated crop maturity
+- Ensure irrigation at grain filling stage of wheat
+- Harvest before hot winds (loo) damage grain quality
+- Control terminal heat stress in wheat with light irrigation
+
+## EXTREME WEATHER EVENTS
+
+DROUGHT ADVISORY:
+MILD DROUGHT (20–25% rainfall deficit):
+- Use moisture conservation: mulching, ridges and furrows
+- Apply anti-transpirants (Kaolin 5% spray on leaves)
+- Harvest mature crops early; avoid drought-sensitive growth stages
+- Switch to drought-tolerant varieties: pearl millet, sorghum, moth bean
+
+SEVERE DROUGHT (> 50% rainfall deficit):
+- Claim crop insurance (PMFBY) immediately
+- Apply for relief under NDRF (National Disaster Response Fund)
+- Plant contingency crops: cluster bean, cowpea (short duration)
+- Pray for government SDRF assistance
+
+FLOOD ADVISORY:
+BEFORE FLOOD:
+- Harvest mature or near-mature crops immediately
+- Move harvested produce to higher ground
+- Secure farm implements and livestock
+
+DURING FLOOD:
+- Do NOT enter flooded fields; electrical risk
+- Document crop damage for insurance claim
+
+AFTER FLOOD:
+- Report crop damage to district/taluka agricultural office within 7 days
+- Drain fields as soon as possible
+- Apply potassium nitrate (0.5% KNO3) foliar spray to revive stress
+- Replant gaps in paddy/vegetable fields
+- Apply additional N top dressing after water recedes
+- Apply Trichoderma to prevent fungal diseases in moist conditions
+
+CYCLONE ADVISORY:
+- Harvest mature crops before approaching cyclone
+- Provide support/staking to tall crops (banana, papaya)
+- After cyclone: drainage, plant support, foliar spray of micronutrients
+
+HAILSTORM ADVISORY:
+- Report damage to insurance company within 48 hours (for PMFBY localized calamity claim)
+- Apply 0.1% Boron spray to promote new growth in damaged crops
+- Prune damaged branches in orchards; apply Bordeaux paste on wounds
+
+HEAT WAVE ADVISORY (Temperature > 45°C):
+- Increase irrigation frequency; mulch with straw/dry grass
+- Harvest night temperatures for transplanting operations
+- Protect livestock: provide shade, excess water
+- Spray kaolin 5% to reduce leaf temperature in vegetables and fruit trees
+
+## CLIMATE CHANGE ADAPTATION FOR FARMERS
+
+TEMPERATURE RISE IMPACTS:
+- Wheat yield: -6% for each 1°C rise above 33°C
+- Rice: increased pest pressure; spikelet sterility at > 35°C
+- Increase in drought and flood frequency
+
+ADAPTATION STRATEGIES:
+1. CROP DIVERSIFICATION:
+   - Include heat-tolerant varieties: wheat (K-0307, DBW-187, HD-3385)
+   - Rice: Dhan 116, Sahbhagi Dhan (drought-tolerant)
+   - Shift to heat-tolerant crops: sorghum, pearl millet, cowpea
+
+2. CHANGE SOWING DATE:
+   - Advance wheat sowing 1–2 weeks earlier to avoid terminal heat stress
+   - Delay kharif sowing to coincide with better rainfall distribution
+
+3. CONSERVATION AGRICULTURE:
+   - Zero tillage or minimum tillage (reduced fuel, moisture conservation)
+   - Residue management: mulching instead of burning
+   - Cover crops to protect soil from erosion and temperature extremes
+
+4. AGROFORESTRY:
+   - Integrate trees with crops (Mango, Neem, Teak)
+   - Windbreaks reduce wind erosion
+   - Trees moderate field microclimate (2–3°C cooler)
+   - Additional income from timber, fruits, fuelwood
+
+5. WATER SMART PRACTICES:
+   - Shift from flood to drip/sprinkler irrigation
+   - AWD (Alternate Wetting and Drying) in rice
+   - Farm ponds for rainwater harvesting
+   - Groundwater recharge structures
+
+## CROP WEATHER CALENDARS (NORTH INDIA)
+
+JANUARY:
+- Rabi crops: Wheat, mustard in vegetative/flowering stage
+- Irrigation: Wheat at jointing; avoid irrigation before cold wave
+- Pest watch: Aphids on mustard; powdery mildew on peas
+- Advisory: Weed control (hand weeding or herbicide); top dress N on wheat
+
+FEBRUARY:
+- Wheat at flowering/heading; critical for yield
+- Irrigation: Wheat at milky/dough stage
+- Advisory: Foliar spray of Zn and boron on wheat; watch for yellow rust
+- Vegetable: Spring maize sowing begins
+
+MARCH:
+- Wheat ripening; harvest in last week of March to April
+- Mustard harvest; field preparation for summer crops
+- Temperature rising; summer vegetable (cucumber, okra) nursery
+
+APRIL:
+- Wheat harvest complete by mid-April
+- Summer crops (maize, sunflower) sowing
+- Land preparation for kharif; deep ploughing
+- Advisory: Apply gypsum on sodic soils; lime on acidic soils
+
+MAY:
+- Summer crops in growth; hot conditions
+- Manage irrigation carefully; irrigate in evening
+- Vegetable growing: Apply mulch; increase irrigation frequency
+- Advisory: Pre-monsoon land preparation; repair bunds
+
+JUNE:
+- Monsoon onset; kharif sowing begins (groundnut, soybean, maize)
+- Rice nursery raising; transplanting in June–July
+- Advisory: Apply basal dose at sowing; first herbicide application
+
+JULY:
+- Rice transplanting; kharif crops in active growth
+- High humidity: pest and disease alert (blast, BPH in rice; downy mildew in maize)
+- Advisory: Top dress N; scout regularly for pests
+
+AUGUST:
+- Kharif crops in peak vegetative/reproductive stage
+- Most critical irrigation and pest management month
+- Advisory: Apply second split N; monitor for BPH, blast, armyworm
+
+SEPTEMBER:
+- Early kharif harvest (moong, urad, fodder crops)
+- Late kharif (paddy, cotton, soybean) approaching maturity
+- Advisory: Prepare for rabi; soil testing now
+
+OCTOBER:
+- Main kharif harvest month (paddy, cotton, maize, soybean)
+- Rabi sowing begins (mustard, peas, chickpea)
+- Advisory: Use combine harvester where available; stubble management
+
+NOVEMBER:
+- Wheat sowing peak period (Nov 1–25: OPTIMAL window)
+- Mustard at vegetative stage
+- Advisory: Seed treatment essential; basal dose application; first irrigation after CRI
+
+DECEMBER:
+- Rabi crops in vegetative stage (wheat tillering, mustard flowering)
+- Cold weather; frost risk in hilly areas
+- Advisory: Protect nurseries from frost; watch for aphids on mustard
+
+## WEATHER-BASED CROP INSURANCE TRIGGERS
+
+INDEX-BASED CROP INSURANCE:
+- Triggers based on weather station data (no crop cutting required)
+- Faster claim settlement; more transparent
+- Parameters: rainfall deficit, temperature (heat units), wind speed
+
+RAINFALL INDEX:
+- Coverage triggers if cumulative rainfall < defined threshold during crop period
+- Useful for drought-prone areas where crops fail due to less rain
+
+TEMPERATURE INDEX:
+- Covers yield loss due to excess heat (above threshold) or cold waves
+- Applied to: wheat (terminal heat), citrus (frost), potato (frost)

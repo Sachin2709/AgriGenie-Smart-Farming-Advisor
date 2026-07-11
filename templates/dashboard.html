@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% block title %}Dashboard – AgriGenie AI{% endblock %}
+{% block page_title %}🏠 Dashboard{% endblock %}
+
+{% block content %}
+<!-- Welcome Banner -->
+<div class="ag-weather-card mb-4" style="position:relative;overflow:hidden">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+      <h4 style="font-weight:800;margin-bottom:4px">
+        Jai Jawan, Jai Kisan! 🌾
+      </h4>
+      <p style="opacity:.85;margin-bottom:12px;font-size:.95rem">
+        Welcome back, <strong>{{ current_user.username }}</strong>!
+        {% if profile and profile.state %} — {{ profile.state }}{% endif %}
+        | {{ month }} Season Advisory Active
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="{{ url_for('chat_page') }}" class="btn btn-light btn-sm fw-bold" style="border-radius:8px;color:#1b5e20">
+          💬 Ask AI Advisor
+        </a>
+        <a href="{{ url_for('crop_advisor') }}" class="btn btn-outline-light btn-sm" style="border-radius:8px">
+          🌱 Crop Advice
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+      <div style="font-size:3.5rem;font-weight:900;line-height:1">
+        {{ weather.temperature }}°C
+      </div>
+      <div style="opacity:.85;font-size:1rem">{{ weather.description }}</div>
+      <div style="opacity:.7;font-size:.82rem">{{ weather.location }}</div>
+      <div style="opacity:.6;font-size:.75rem;margin-top:4px">
+        Humidity {{ weather.humidity }}% · Wind {{ weather.wind_speed }} km/h
+        {% if weather.source == 'mock' %} · (demo data){% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Row -->
+<div class="row g-3 mb-4">
+  <div class="col-6 col-lg-3">
+    <div class="ag-stat-card">
+      <div class="ag-stat-icon" style="background:rgba(34,134,58,.12)">🌱</div>
+      <div>
+        <div class="ag-stat-value">{{ profile.land_size or 0 }}</div>
+        <div class="ag-stat-label">Acres Land</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="ag-stat-card" style="--ag-primary:#2563eb">
+      <div class="ag-stat-icon" style="background:rgba(37,99,235,.12)">💬</div>
+      <div>
+        <div class="ag-stat-value">{{ chat_count }}</div>
+        <div class="ag-stat-label">AI Queries</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="ag-stat-card" style="--ag-primary:#f0a500">
+      <div class="ag-stat-icon" style="background:rgba(240,165,0,.12)">🌤</div>
+      <div>
+        <div class="ag-stat-value">{{ weather.temperature }}°</div>
+        <div class="ag-stat-label">Today's Temp</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="ag-stat-card" style="--ag-primary:#7c3aed">
+      <div class="ag-stat-icon" style="background:rgba(124,58,237,.12)">📅</div>
+      <div>
+        <div class="ag-stat-value">{{ month[:3] }}</div>
+        <div class="ag-stat-label">Current Month</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- Quick Actions -->
+  <div class="col-lg-4">
+    <div class="ag-card h-100">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">⚡ Quick Actions</h6>
+      </div>
+      <div class="ag-card-body p-3">
+        {% set actions = [
+          ('/chat', '💬', 'Chat with AI Advisor', 'success'),
+          ('/crop-advisor', '🌱', 'Crop Recommendation', 'primary'),
+          ('/soil-health', '🪨', 'Soil Analysis', 'warning'),
+          ('/pest-advisor', '🐛', 'Pest Diagnosis', 'danger'),
+          ('/fertilizer', '🧪', 'Fertilizer Guide', 'info'),
+          ('/mandi-prices', '📊', 'Mandi Prices', 'secondary'),
+          ('/irrigation', '💧', 'Irrigation Plan', 'primary'),
+          ('/government-schemes', '🏛', 'Govt Schemes', 'success'),
+        ] %}
+        <div class="row g-2">
+          {% for href, icon, label, color in actions %}
+          <div class="col-6">
+            <a href="{{ href }}" class="btn btn-outline-{{ color }} btn-sm w-100 text-start d-flex align-items-center gap-2"
+               style="border-radius:8px;font-size:.82rem;padding:8px 10px">
+              {{ icon }} {{ label }}
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Mandi Prices -->
+  <div class="col-lg-5">
+    <div class="ag-card h-100">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📊 Mandi Prices</h6>
+        <a href="{{ url_for('mandi_prices') }}" style="font-size:.8rem;color:var(--ag-muted)">See All →</a>
+      </div>
+      <div class="ag-card-body p-0">
+        <table class="ag-price-table">
+          <thead>
+            <tr>
+              <th>Crop</th>
+              <th>Modal (₹/q)</th>
+              <th>Trend</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for crop, data in prices.items() %}
+            <tr>
+              <td style="font-weight:600">{{ crop }}</td>
+              <td>₹{{ "{:,}".format(data.modal) }}</td>
+              <td>
+                <span class="ag-badge badge-{{ data.trend }}">
+                  {% if data.trend == 'up' %}↑ Up
+                  {% elif data.trend == 'down' %}↓ Down
+                  {% elif data.trend == 'volatile' %}~ Volatile
+                  {% else %}→ Stable{% endif %}
+                </span>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="col-lg-3">
+    <div class="ag-card h-100">
+      <div class="ag-card-header">
+        <h6 class="ag-card-title">📜 Recent Chats</h6>
+        <a href="{{ url_for('chat_history') }}" style="font-size:.8rem;color:var(--ag-muted)">All →</a>
+      </div>
+      <div class="ag-card-body p-3">
+        {% if recent_chats %}
+          {% for msg in recent_chats %}
+          <div style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--ag-border)">
+            <div style="font-size:.8rem;font-weight:600;color:var(--ag-text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+              {{ msg.content[:60] }}{% if msg.content|length > 60 %}…{% endif %}
+            </div>
+            <div style="font-size:.72rem;color:var(--ag-muted);margin-top:2px">
+              {{ msg.timestamp.strftime('%d %b %H:%M') }}
+              {% if msg.topic %} · {{ msg.topic }}{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="text-center py-4" style="color:var(--ag-muted)">
+            <div style="font-size:2.5rem">💬</div>
+            <p style="font-size:.85rem;margin-top:8px">No chats yet.<br>Ask the AI anything!</p>
+            <a href="{{ url_for('chat_page') }}" class="btn-ag btn-sm mt-2">Start Chat</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Season Advisory Banner -->
+<div class="ag-card mt-4">
+  <div class="ag-card-body">
+    <div class="row align-items-center">
+      <div class="col-md-9">
+        <h6 style="color:var(--ag-primary);font-weight:700;margin-bottom:4px">
+          📅 {{ month }} Season Advisory
+        </h6>
+        <p style="color:var(--ag-muted);font-size:.88rem;margin:0">
+          Get AI-powered monthly farming operations advisory specific to your location and crops.
+          Know what to sow, irrigate, spray, and harvest this month!
+        </p>
+      </div>
+      <div class="col-md-3 text-md-end mt-3 mt-md-0">
+        <a href="{{ url_for('farming_calendar') }}" class="btn-ag">📅 View Calendar</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

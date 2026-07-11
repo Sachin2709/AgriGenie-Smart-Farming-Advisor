@@ -1,0 +1,142 @@
+SOIL HEALTH MANAGEMENT MANUAL FOR INDIAN AGRICULTURE
+======================================================
+
+## UNDERSTANDING SOIL HEALTH
+Soil health (also called soil quality) is the continued capacity of soil to function as a vital living ecosystem that sustains plants, animals, and humans.
+
+SOIL HEALTH INDICATORS:
+- Physical: texture, structure, bulk density, porosity, water holding capacity
+- Chemical: pH, organic matter, nutrient levels (N, P, K, micronutrients), EC, CEC
+- Biological: microbial biomass, earthworm count, enzyme activity, respiration rate
+
+## SOIL pH AND MANAGEMENT
+
+SOIL pH RANGES:
+- Strongly acid: < 5.0 (common in NE India, Assam, West Bengal tea gardens)
+- Moderately acid: 5.0–6.0 (suitable for tea, coffee, potato, groundnut)
+- Slightly acid: 6.0–6.5 (ideal for most crops)
+- Neutral: 6.5–7.0 (optimal for maximum crops)
+- Slightly alkaline: 7.0–7.5 (suitable for wheat, cotton, sugarcane)
+- Moderately alkaline: 7.5–8.5 (problematic – saline-sodic soils)
+- Strongly alkaline: > 8.5 (unsuitable – usar/alkali soils)
+
+ACIDIC SOIL CORRECTION (pH < 6.0):
+- Apply agricultural lime (CaCO3): 2–4 tonnes/ha depending on soil texture
+- Dolomite lime (CaMg(CO3)2): preferred if Mg also deficient; 2–4 t/ha
+- Wood ash: 2–5 t/ha; also provides K and micronutrients
+- Apply lime 4–6 weeks before sowing; incorporate into soil
+- Recheck pH after 3 months
+
+ALKALINE/SODIC SOIL CORRECTION (pH > 8.0, usar land):
+- Apply gypsum (CaSO4.2H2O): 5–10 t/ha for moderately sodic; 10–20 t/ha for highly sodic
+- Green manuring with dhaincha (Sesbania bispinosa)
+- FYM/compost application: 10–15 t/ha
+- Paddy cultivation initially helps reclaim alkali soils
+- Pyrite (FeS2): 5 t/ha for calcareous alkali soils
+
+## ORGANIC MATTER AND CARBON MANAGEMENT
+
+TARGET ORGANIC CARBON LEVELS:
+- Low: < 0.5% (deficient – most Indian soils)
+- Medium: 0.5–0.75% (marginal)
+- High: > 0.75% (adequate)
+- Ideal: 1.0–1.5%
+
+WAYS TO INCREASE ORGANIC MATTER:
+1. FYM (Farm Yard Manure): apply 10–15 t/ha; well-decomposed FYM is best
+2. Compost: 5–10 t/ha; NADEP, vermicompost (3–5 t/ha)
+3. Green manuring: Dhaincha, Sunhemp, Cowpea – ploughed under at flowering
+4. Crop residue incorporation: instead of burning; cover crops in fallow
+5. Biofertilizers: Azospirillum, Rhizobium, PSB, VAM (vesicular arbuscular mycorrhiza)
+6. Reduced tillage: minimizes oxidation of organic matter
+
+## MACRO NUTRIENT MANAGEMENT
+
+NITROGEN (N) – The yield builder:
+- Deficiency symptoms: yellowing from older/lower leaves upwards; stunted growth
+- Sources: Urea (46% N), CAN (25% N), AS (20.5% N), DAP (18% N)
+- Urea application tips: apply in 3 splits – basal 30%, CRI stage 30%, flag leaf 40% for wheat
+- AVOID: broadcasting on flooded fields (volatilization loss), surface application without incorporation
+- Recommended rates: wheat 120 kg N/ha; rice 100–120 kg N/ha; maize 150 kg N/ha
+
+PHOSPHORUS (P) – The root developer:
+- Deficiency: purpling of leaves; poor root development; delayed maturity
+- Sources: DAP (46% P2O5), SSP (16% P2O5), TSP (46% P2O5)
+- Apply as basal dose – entire P at sowing/transplanting
+- PSB (Phosphate Solubilizing Bacteria) can enhance P availability
+- Recommended rates: wheat 60 kg P2O5/ha; rice 40–50 kg/ha
+
+POTASSIUM (K) – The quality builder:
+- Deficiency: scorching of leaf tips and margins; weak stalks; poor grain quality
+- Sources: MOP (muriate of potash – 60% K2O), SOP (sulphate of potash – 50% K2O)
+- SOP preferred for chloride-sensitive crops (potato, tobacco)
+- Recommended rates: wheat 40 kg K2O/ha; potato 120 kg K2O/ha; banana 300 kg K2O/ha
+
+## SECONDARY AND MICRO NUTRIENT DEFICIENCIES
+
+SULFUR (S):
+- Deficiency: yellowing of young leaves (unlike N – starts from top); common in Haryana, Punjab
+- Sources: Gypsum (19% S), Elemental S, SSP (11% S), Ammonium Sulfate (24% S)
+- Dose: 20–40 kg S/ha depending on crop
+
+ZINC (Zn) – Most widespread micronutrient deficiency in India (nearly 50% soils):
+- Deficiency: "Khaira" in rice – brown rusty spots; delayed flowering; small leaves
+- Sources: ZnSO4 (33% Zn) – 25 kg/ha as soil application; 0.5% foliar spray
+- Seed treatment: 2.5 g ZnSO4/kg seed
+
+IRON (Fe):
+- Deficiency: interveinal chlorosis of young leaves; pH > 7.5 soils; waterlogged conditions
+- Sources: FeSO4.7H2O – 20 kg/ha soil; 0.5% foliar spray (3–4 times)
+
+BORON (B):
+- Deficiency: hollow heart in cauliflower, sunflower; poor fruit set in groundnut, cotton
+- Sources: Borax (10.5% B) – 10–15 kg/ha soil; 0.2% foliar spray
+- CAUTION: Narrow toxicity-deficiency range; do not over-apply
+
+MANGANESE (Mn):
+- Deficiency: interveinal chlorosis; common in light-textured, high pH soils
+- Sources: MnSO4 – 20 kg/ha soil; 0.5% foliar spray
+
+## SOIL TESTING INTERPRETATION
+
+SOIL TEST RECOMMENDATION (STR) APPROACH:
+1. Collect composite soil sample from 0–15 cm depth (surface) and 15–30 cm (sub-surface)
+2. Use clean tools; avoid contamination
+3. Mix 20–25 spot samples per hectare
+4. Send to nearest Soil Testing Laboratory (under NM-PPHE scheme)
+
+SOIL HEALTH CARD (SHC) SCHEME:
+- Government of India issues free Soil Health Cards to farmers
+- Tests 12 parameters: NPK, S, Zn, Fe, Cu, Mn, B, pH, EC, OC
+- Recommendations specific to crop and soil type
+- Renew every 2 years
+
+## SOIL TEXTURE AND CLASSIFICATION
+
+SOIL TYPES IN INDIA:
+1. Alluvial Soils (43% area): Indo-Gangetic plains; highly fertile; wheat, rice, sugarcane
+2. Black (Regur) Soils (15%): Deccan plateau; cotton belt; high water-holding capacity
+3. Red and Yellow Soils (21%): Peninsula; iron-rich; groundnut, millets, tobacco
+4. Laterite Soils (8%): High rainfall areas; acidic; cashew, coffee, tea
+5. Arid/Desert Soils (4%): Rajasthan; poor organic matter; pearl millet, cluster bean
+6. Forest/Mountain Soils (8%): Himalayan region; tea, temperate fruits
+
+SOIL TEXTURE IMPROVEMENT:
+- Sandy soils: add clay, FYM, green manure; use water-retaining polymers
+- Clay soils: add sand, gypsum; deep ploughing; raised bed cultivation
+- Loam soils: maintain with regular organic matter addition
+
+## BIOFERTILIZERS AND SOIL BIOLOGY
+
+TYPES AND USES:
+- Rhizobium: legume crops – soybean, groundnut, pulses (seed treatment 250 g/ha)
+- Azospirillum: non-legumes – wheat, maize, rice (seed + soil treatment)
+- Azotobacter: free-living N-fixer for non-legumes (5 kg/ha soil)
+- PSB (Phosphate Solubilizing Bacteria): all crops (seed + soil treatment)
+- Trichoderma: biocontrol + soil health; 2.5 kg/ha soil application
+- VAM (Vesicular Arbuscular Mycorrhiza): phosphorus uptake; drought tolerance
+
+VERMICOMPOST:
+- Nutrient content: 2–3% N, 1.5–2% P, 1.5–2% K + micronutrients + humus
+- Application rate: 3–5 t/ha; use instead of or alongside FYM
+- Benefits: improves aeration, water retention, microbial activity

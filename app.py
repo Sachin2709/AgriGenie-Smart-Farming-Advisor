@@ -1299,7 +1299,7 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    port = int(os.getenv("FLASK_PORT", 5000))
+    port = int(os.getenv("PORT", os.getenv("FLASK_PORT", 5000)))
     debug = os.getenv("FLASK_DEBUG", "False").lower() == "true"
     logger.info(f"🌱 AgriGenie AI starting on http://localhost:{port}")
     app.run(host="0.0.0.0", port=port, debug=debug, use_reloader=False)

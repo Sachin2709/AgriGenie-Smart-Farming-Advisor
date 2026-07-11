@@ -1,0 +1,42 @@
+# Secrets — never bake credentials into the image
+.env
+
+# Local database and generated files
+instance/agrigenie.db
+instance/faiss_index/
+instance/chroma_db/
+reports/
+uploads/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker itself
+Dockerfile
+.dockerignore
+
+# Dev/test files
+test_ibm.py
+tests/
+
+

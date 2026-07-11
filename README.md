@@ -49,7 +49,7 @@ copy .env.example .env        # Windows
 IBM_API_KEY=your_ibm_cloud_api_key_here
 IBM_PROJECT_ID=your_watsonx_project_id_here
 IBM_URL=https://us-south.ml.cloud.ibm.com
-IBM_MODEL_ID=ibm/granite-3-3-8b-instruct
+IBM_MODEL_ID=ibm/granite-3-2-8b-instruct
 ```
 
 > **How to get IBM credentials:**
@@ -88,7 +88,7 @@ Open browser: **http://localhost:5000**
 | Feature | Details |
 |---------|---------|
 | 🔍 **RAG Pipeline** | FAISS (default) or ChromaDB vector store |
-| 📚 **Knowledge Base** | 7 agricultural domain documents (crops, soil, pest, fertilizer, irrigation, weather, schemes) |
+| 📚 **Knowledge Base** | 9 agricultural domain documents (crops, soil, pest, fertilizer, irrigation, weather, schemes, mandi, calendar) |
 | 👤 **User Management** | Login, register, farmer profile |
 | 📜 **Chat History** | Searchable, filterable history with re-ask feature |
 | 📥 **PDF Reports** | Downloadable farming reports for any advisory |
@@ -106,7 +106,7 @@ AgriGenie AI – Smart Farming Advice Agent/
 ├── rag_pipeline.py             ← RAG pipeline (FAISS/ChromaDB)
 ├── requirements.txt            ← Python dependencies
 ├── .env.example                ← Environment template
-├── .env                        ← Your credentials (create from .env.example)
+├── .env                        ← Your credentials (NOT in repo – create from .env.example)
 │
 ├── knowledge_base/             ← Agricultural knowledge documents
 │   ├── crop_guides.txt         ← Major crop cultivation guides
@@ -158,12 +158,12 @@ All configuration is in `.env`. Here's the complete reference:
 IBM_API_KEY=your_api_key
 IBM_PROJECT_ID=your_project_id
 IBM_URL=https://us-south.ml.cloud.ibm.com
-IBM_MODEL_ID=ibm/granite-3-3-8b-instruct
+IBM_MODEL_ID=ibm/granite-3-2-8b-instruct
 
 # Flask
 FLASK_SECRET_KEY=change-this-in-production
 FLASK_PORT=5000
-FLASK_DEBUG=True
+FLASK_DEBUG=False
 
 # RAG
 VECTOR_STORE=faiss           # Options: faiss | chroma
@@ -312,7 +312,7 @@ curl -X POST http://localhost:5000/api/chat \
   -H "X-CSRFToken: <token>" \
   -d '{"message": "What is the best crop for Punjab in Rabi season?", "topic": "crop"}'
 
-# Get Mandi Prices
+# Get Mandi Prices (requires login session)
 curl http://localhost:5000/api/mandi-prices
 
 # RAG Status

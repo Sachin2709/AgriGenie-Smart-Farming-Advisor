@@ -26,3 +26,6 @@ instance/faiss_index/
 # OS
 .DS_Store
 Thumbs.db
+
+# Test/debug scripts
+test_ibm.py

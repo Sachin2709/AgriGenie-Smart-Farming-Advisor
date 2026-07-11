@@ -112,7 +112,7 @@ app = Flask(__name__)
 
 # Config
 app.config["SECRET_KEY"]              = os.getenv("FLASK_SECRET_KEY", "agrigenie-dev-key-2024")
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(os.getcwd(), 'instance', 'agrigenie.db')}"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(os.path.dirname(os.path.abspath(__file__)), "instance", "agrigenie.db")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["WTF_CSRF_ENABLED"]        = True
 app.config["MAX_CONTENT_LENGTH"]      = 16 * 1024 * 1024  # 16 MB

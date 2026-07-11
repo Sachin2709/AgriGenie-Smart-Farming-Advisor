@@ -28,8 +28,11 @@ EMBEDDING_MODEL   = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-Mini
 CHUNK_SIZE        = int(os.getenv("CHUNK_SIZE", "512"))
 CHUNK_OVERLAP     = int(os.getenv("CHUNK_OVERLAP", "64"))
 TOP_K             = int(os.getenv("TOP_K_RESULTS", "5"))
-INDEX_PATH        = "instance/faiss_index"
-CHROMA_PATH       = "instance/chroma_db"
+
+# Use absolute paths so they work on both local and Render
+_BASE_DIR         = os.path.dirname(os.path.abspath(__file__))
+INDEX_PATH        = os.path.join(_BASE_DIR, "instance", "faiss_index")
+CHROMA_PATH       = os.path.join(_BASE_DIR, "instance", "chroma_db")
 
 
 # ──────────────────────────────────────────────────────────

@@ -1,0 +1,33 @@
+{
+  "name": "AgriGenie AI",
+  "description": "AI-Powered Smart Farming Advisor using IBM watsonx.ai Granite models, RAG, FAISS, and Flask.",
+  "repository": "https://github.com/Sachin2709/AgriGenie-Smart-Farming-Advisor",
+  "keywords": [
+    "python",
+    "flask",
+    "ibm-watsonx",
+    "granite",
+    "rag",
+    "faiss",
+    "agriculture",
+    "ai"
+  ],
+  "env": {
+    "IBM_API_KEY": {
+      "description": "IBM Cloud API Key",
+      "required": true
+    },
+    "IBM_PROJECT_ID": {
+      "description": "IBM watsonx.ai Project ID",
+      "required": true
+    },
+    "IBM_URL": {
+      "description": "IBM watsonx.ai URL",
+      "value": "https://us-south.ml.cloud.ibm.com"
+    },
+    "IBM_MODEL_ID": {
+      "description": "IBM Granite Model ID",
+      "value": "ibm/granite-3-2-8b-instruct"
+    }
+  }
+}

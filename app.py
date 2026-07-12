@@ -8,7 +8,6 @@ import os
 import json
 import logging
 import hashlib
-import threading
 import requests
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
@@ -1273,27 +1272,10 @@ def server_error(e):
 # ══════════════════════════════════════════════════════════
 #  Application Startup
 # ══════════════════════════════════════════════════════════
-def start_rag_initialization():
-    try:
-        rag_manager.initialize()
-    except Exception as exc:
-        logger.warning(f"RAG initialisation deferred: {exc}")
-
-
 def create_app():
     with app.app_context():
         db.create_all()
         logger.info("Database tables created")
-
-        try:
-            threading.Thread(
-                target=start_rag_initialization,
-                name="rag-init",
-                daemon=True,
-            ).start()
-        except Exception as exc:
-            logger.warning(f"RAG background startup failed: {exc}")
-
     return app
 
 

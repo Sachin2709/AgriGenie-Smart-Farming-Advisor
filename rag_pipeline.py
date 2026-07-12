@@ -103,10 +103,13 @@ class FAISSVectorStore:
         self.index = None
         self.chunks: List[str] = []
         self.metas:  List[dict] = []
+        # embedder is NOT loaded here — deferred to first use to save startup RAM
         self.embedder = None
-        self._load_embedder()
 
-    def _load_embedder(self):
+    def _ensure_embedder(self):
+        """Load the SentenceTransformer model once, reuse on all future calls."""
+        if self.embedder is not None:
+            return
         try:
             from sentence_transformers import SentenceTransformer
             self.embedder = SentenceTransformer(EMBEDDING_MODEL)
@@ -117,6 +120,7 @@ class FAISSVectorStore:
 
     def build_index(self, chunks: List[str], metas: List[dict]):
         """Build FAISS index from text chunks."""
+        self._ensure_embedder()          # load model only when actually needed
         if not chunks or self.embedder is None:
             return
         try:
@@ -148,6 +152,7 @@ class FAISSVectorStore:
             logger.error(f"Error saving FAISS index: {exc}")
 
     def load_index(self) -> bool:
+        # Loads only the FAISS index and chunks — embedder stays unloaded until search()
         try:
             import faiss
             idx_file = f"{INDEX_PATH}/index.faiss"
@@ -165,7 +170,10 @@ class FAISSVectorStore:
 
     def search(self, query: str, top_k: int = TOP_K) -> List[Tuple[str, dict, float]]:
         """Returns list of (chunk, metadata, score) tuples."""
-        if self.index is None or self.embedder is None:
+        if self.index is None:
+            return []
+        self._ensure_embedder()          # load model only on first real query
+        if self.embedder is None:
             return []
         try:
             import faiss, numpy as np
